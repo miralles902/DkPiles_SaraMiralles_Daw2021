@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+/* Añadir direcciones de controladores aquí */
+use App\Http\Controllers\UsuarioController; 
 
 /*
 |--------------------------------------------------------------------------
@@ -14,5 +16,15 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
+Route::resource('usuarios', UsuarioController::class);
+Route::get('usuarios', [UsuarioController::class, 'index']);
+Route::get('config');
+Route::get('/config', function () {
+    return view('configuracion/config');
+});
+/*Route::resource('empleo', EmpleoController::class);
+Route::get('empleo', [EmpleoController::class, 'index']);
+Route::resource('user', UserController::class);
+Route::get('user', [UserController::class, 'index']);*/
