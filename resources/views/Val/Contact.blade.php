@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>DkPiles - Galeria</title>
+    <title>DkPiles - Contacta</title>
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
@@ -399,18 +399,18 @@
 </head>
 
 <body>
-    <h1>Página de la Galeria de DkPiles</h1>
+    <h1>Página principal de DkPiles</h1>
     <div class="pull-right">
-        <a href="{{ url('/') }}">Página principal</a>
-        <a class="btn btn-primary" href="{{ url('/club') }}">Club</a>
-        <a class="btn btn-primary" href="{{ url('/contacto') }}">Contacto</a>
-        <a class="btn btn-primary" href="{{ url('/tiempo') }}">El tiempo</a>
-        <a class="btn btn-primary" href="{{ url('/galeria') }}">Galeria</a>
-        <a class="btn btn-primary" href="{{ url('/login') }}">Login</a>
-        <a class="btn btn-primary" href="{{ url('/mercadillo') }}">Mercadillo</a>
-        <a class="btn btn-primary" href="{{ url('/noticias') }}">Noticias</a>
-        <a class="btn btn-primary" href="{{ url('/webcams') }}">Webcams</a>
-        <a class="btn btn-primary" href="{{ url('/val') }}">Valenciano</a>
+        <a href="{{ url('/val') }}">Página principal</a>
+        <a class="btn btn-primary" href="{{ url('/val/club') }}">Club</a>
+        <a class="btn btn-primary" href="{{ url('/val/contacte') }}">Contacte</a>
+        <a class="btn btn-primary" href="{{ url('/val/temps') }}">El temps</a>
+        <a class="btn btn-primary" href="{{ url('/val/galeria') }}">Galeria</a>
+        <a class="btn btn-primary" href="{{ url('/val/login') }}">Login</a>
+        <a class="btn btn-primary" href="{{ url('/val/mercadillo') }}">Mercadillo</a>
+        <a class="btn btn-primary" href="{{ url('/val/noticies') }}">Noticies</a>
+        <a class="btn btn-primary" href="{{ url('/val/webcams') }}">Webcams</a>
+        <a class="btn btn-primary" href="{{ url('/') }}">Castellano</a>
     </div>
 </body>
 
