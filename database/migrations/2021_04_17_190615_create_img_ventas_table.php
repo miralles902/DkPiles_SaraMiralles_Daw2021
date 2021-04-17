@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateVentasTable extends Migration
+class CreateImgVentasTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,11 @@ class CreateVentasTable extends Migration
      */
     public function up()
     {
-        Schema::create('ventas', function (Blueprint $table) {
+        Schema::create('img_ventas', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('autor');
-            $table->string('titulo');
-            $table->string('cuerpo');
-            $table->string('datos');
-            $table->integer('foto')->unsigned();
-            $table->string('url');
+            $table->string('nombre');
+            $table->string('formato');
+            $table->integer('ventas_id')->references('id')->on('ventas')->onDelete('cascade');
             $table->timestamps();
         });
     }
@@ -32,6 +29,6 @@ class CreateVentasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('ventas');
+        Schema::dropIfExists('img_ventas');
     }
 }
