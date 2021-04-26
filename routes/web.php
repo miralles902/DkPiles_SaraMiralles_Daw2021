@@ -15,12 +15,12 @@ use App\Http\Controllers\UsuarioController;
 |
 */
 
+/*paginas web principal (index)*/
 Route::get('/', function () {
     return view('index');
 });
-Route::get('/club', function () {
-    return view('club');
-});
+
+/*paginas web principales*/
 Route::get('/contacto', function () {
     return view('contact');
 });
@@ -42,12 +42,12 @@ Route::get('/noticias', function () {
 Route::get('/webcams', function () {
     return view('webcams');
 });
+
+/*página web principal valenciano*/
 Route::get('/val', function () {
     return view('/Val/index');
 });
-Route::get('/val/club', function () {
-    return view('/Val/club');
-});
+/*paginas web principales valenciano*/
 Route::get('/val/contacte', function () {
     return view('/Val/contact');
 });
@@ -69,8 +69,12 @@ Route::get('/val/noticies', function () {
 Route::get('/val/webcams', function () {
     return view('/Val/webcams');
 });
+
+/*ruta al archivo controlador de usuarios y a su página*/
 Route::resource('usuarios', UsuarioController::class);
 Route::get('usuarios', [UsuarioController::class, 'index']);
+
+/* ruta a la página de configuración */
 Route::get('/config', function () {
     return view('configuracion/config');
 });

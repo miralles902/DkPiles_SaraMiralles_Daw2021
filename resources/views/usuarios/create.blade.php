@@ -41,13 +41,17 @@
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
         <div class="form-group">
-           <!-- <div class="form-group">
+            <div class="form-group">
                 <strong>id Perfil:</strong>
                 <select name="idPerfil" id="idPerfil" form="idPerfil">
-                    <option value="1">Administrador</option>
-                    <option value="0" selected>Editor</option>
+                echo Form::select('2', array('L' => 'Large', 'S' => 'Small'), 'S');
                 </select>
-            </div> -->
+                <ul class="dropdown-menu">
+                    @foreach($categories as $category)
+                    <li><a href="{{$category->id}}">{{$category->name}}</a></li>
+                    @endforeach
+                </ul>
+            </div> 
         </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">

@@ -1,0 +1,90 @@
+@charset "UTF-8";
+/* Colores del cuerpo */
+body {
+  background: #f7ede5;
+  -webkit-transition: .3s ease all;
+  transition: .3s ease all;
+}
+
+body.dark {
+  /* modo oscuro */
+  background: #3a3838;
+}
+
+/* Titulo H1 de la página*/
+body.dark h1 {
+  /* modo oscuro */
+  color: #f7ede5;
+}
+
+/*enlaces*/
+nav {
+  -webkit-transition: .3s ease all;
+  transition: .3s ease all;
+}
+
+nav a {
+  color: #3a3838;
+  text-decoration: none;
+}
+
+body.dark nav a {
+  /* modo oscuro */
+  color: #f7ede5;
+}
+
+body.dark nav a:hover {
+  color: #f7ede5;
+}
+
+/* estilos de boton Claro / Oscuro */
+.switch {
+  background: #343d5b;
+  border-radius: 1000px;
+  border: none;
+  position: relative;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  outline: none;
+}
+
+.switch::after {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  background: #F1F1F1;
+  top: 0;
+  left: 0;
+  /* Para cuando cambiemos la posición del boton*/
+  right: unset;
+  /* Para cuando cambiemos la posición del boton*/
+  border-radius: 100px;
+  -webkit-transition: .3s ease all;
+  transition: .3s ease all;
+  -webkit-box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.switch.active {
+  background: orange;
+  color: black;
+}
+
+.switch.active::after {
+  right: 0;
+  left: unset;
+}
+
+.switch span {
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  display: block;
+  background: none;
+  color: #fff;
+}
+/*# sourceMappingURL=style_index.css.map */
