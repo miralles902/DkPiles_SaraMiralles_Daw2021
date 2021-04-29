@@ -1,4 +1,4 @@
-@extends('usuarios.layout')
+@extends('users.layout')
   
 @section('content')
 <div class="row">
@@ -7,7 +7,7 @@
             <h2>Añade un nuevo usuario</h2>
         </div>
         <div class="pull-right">
-           <a class="btn btn-primary" href="{{ url('usuarios') }}">Atrás</a>
+           <a class="btn btn-primary" href="{{ url('users') }}">Atrás</a>
         </div>
     </div>
 </div>
@@ -23,7 +23,7 @@
     </div>
 @endif
    
-<form action="{{ route('usuarios.store') }}" method="POST">
+<form action="{{ route('users.store') }}" method="POST">
     @csrf
   
      <div class="row">
@@ -40,30 +40,9 @@
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
-        <div class="form-group">
-            <div class="form-group">
-                <strong>id Perfil:</strong>
-                <select name="idPerfil" id="idPerfil" form="idPerfil">
-                echo Form::select('2', array('L' => 'Large', 'S' => 'Small'), 'S');
-                </select>
-                <ul class="dropdown-menu">
-                    @foreach($categories as $category)
-                    <li><a href="{{$category->id}}">{{$category->name}}</a></li>
-                    @endforeach
-                </ul>
-            </div> 
-        </div>
-        </div>
-        <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Email:</strong>
                 <input type="text" name="email" class="form-control" placeholder="Email">
-            </div>
-        </div>
-        <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
-                <strong>Usuario:</strong>
-                <input type="text" name="user" class="form-control" placeholder="Usuario">
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">

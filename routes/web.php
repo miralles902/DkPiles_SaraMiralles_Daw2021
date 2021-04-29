@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 /* Añadir direcciones de controladores aquí */
-use App\Http\Controllers\UsuarioController; 
+use App\Http\Controllers\UserController; 
 use Illuminate\Support\Facades\Auth;
 /*
 |--------------------------------------------------------------------------
@@ -70,9 +70,9 @@ Route::get('/val/webcams', function () {
     return view('/Val/webcams');
 });
 
-/*ruta al archivo controlador de usuarios y a su página*/
-Route::resource('usuarios', UsuarioController::class);
-Route::get('usuarios', [UsuarioController::class, 'index']);
+/*ruta al archivo controlador de users y a su página*/
+Route::resource('users', UserController::class);
+Route::get('users', [UserController::class, 'index']);
 
 /* ruta a la página de configuración */
 Route::get('/config', function () {

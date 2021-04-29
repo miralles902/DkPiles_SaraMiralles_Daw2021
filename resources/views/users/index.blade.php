@@ -1,4 +1,4 @@
-@extends('usuarios.layout')
+@extends('users.layout')
 
 @section('content')
 <div class="row">
@@ -8,7 +8,7 @@
         </div>
         <br>
         <div class="pull-right">
-            <a class="btn btn-success" href="{{ route('usuarios.create') }}">Crear nuevo usuario</a>
+            <a class="btn btn-success" href="{{ route('users.create') }}">Crear nuevo usuario</a>
         </div>
 
     </div>
@@ -25,27 +25,25 @@
         <th>No</th>
         <th>Nombre</th>
         <th>Apellidos</th>
-        <th>Id Perfil</th>
         <th>Email</th>
-        <th>Usuario</th>
         <th>Contraseña</th>
+        <th>Tipo de usuario</th>
         <th width="280px">Acciones</th>
     </tr>
-    @foreach ($usuarios as $usuario)
+    @foreach ($users as $usuario)
     <tr>
         <td>{{ ++$i }}</td>
         <td>{{ $usuario->name }}</td>
         <td>{{ $usuario->surname }}</td>
-        <td>{{ $usuario->idPerfil }}</td>
         <td>{{ $usuario->email }}</td>
-        <td>{{ $usuario->user }}</td>
         <td>{{ $usuario->password }}</td>
+        <td>{{ $usuario->tipo_usuario }}</td>
         <td>
-            <form action="{{ route('usuarios.destroy',$usuario->id) }}" method="POST">
+            <form action="{{ route('users.destroy',$usuario->id) }}" method="POST">
 
-                <a class="btn btn-info" href="{{ route('usuarios.show',$usuario->id) }}">Ver</a>
+                <a class="btn btn-info" href="{{ route('users.show',$usuario->id) }}">Ver</a>
 
-                <a class="btn btn-primary" href="{{ route('usuarios.edit',$usuario->id) }}">Editar</a>
+                <a class="btn btn-primary" href="{{ route('users.edit',$usuario->id) }}">Editar</a>
 
                 @csrf
                 @method('DELETE')
@@ -57,7 +55,7 @@
     @endforeach
 </table>
 
-{!! $usuarios->links() !!}
+{!! $users->links() !!}
 
 <br>
 <div class="pull-left">

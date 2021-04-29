@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Usuario;
+use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 
-class UsuarioController extends Controller
+class UserController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,9 +15,9 @@ class UsuarioController extends Controller
      */
     public function index()
     {
-        $usuarios = Usuario::latest()->paginate(5);
+        $users = User::latest()->paginate(5);
   
-        return view('usuarios.index',compact('usuarios','usuarios'))
+        return view('users.index',compact('users','users'))
             ->with('i', (request()->input('page', 1) - 1) * 5);
     }
 
@@ -27,7 +28,7 @@ class UsuarioController extends Controller
      */
     public function create()
     {
-        return view('usuarios.create');
+        return view('users.create');
     }
 
     /**
@@ -41,52 +42,48 @@ class UsuarioController extends Controller
         $request->validate([
             'name' => 'required',
             'surname' => 'required',
-            'idPerfil' => 'required',
             'email' => 'required',
-            'user' => 'required',
             'password' => 'required',
         ]);
   
-        $usuario = new Usuario([
+        $user = new User([
             'name' => $request->get('name'),
             'surname'=> $request->get('surname'),
-            'idPerfil'=> $request->get('idPerfil'),
             'email'=> $request->get('email'),
-            'user'=> $request->get('user'),
-            'password'=> $request->get('password')
+            'password' => Hash::make($request->get('password')),
         ]);
 
-        $usuario->save();
-        return redirect('/usuarios')->with('success','Usuario creado correctamente.');
+        $user->save();
+        return redirect('/users')->with('success','User creado correctamente.');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Usuario  $usuario 
+     * @param  \App\Models\User  $user 
      * @return \Illuminate\Http\Response
      */
-    public function show(Usuario $usuario)
+    public function show(User $user)
     {
-        return view('usuarios.show',compact('usuario'));
+        return view('users.show',compact('user'));
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Usuario  $usuario
+     * @param  \App\Models\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function edit(Usuario $usuario)
+    public function edit(User $user)
     {
-        return view('usuarios.edit',compact('usuario'));
+        return view('users.edit',compact('user'));
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Usuario  $usuario
+     * @param  \App\Models\User  $user
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
@@ -94,35 +91,31 @@ class UsuarioController extends Controller
         $request->validate([
             'name' => 'required',
             'surname' => 'required',
-            'idPerfil' => 'required',
             'email' => 'required',
-            'user' => 'required',
             'password' => 'required',
         ]);
   
-        $usuarios = Usuario::find($id);
-        $usuarios->name = $request->get('name');
-        $usuarios->surname = $request->get('surname');
-        $usuarios->idPerfil = $request->get('idPerfil');
-        $usuarios->email = $request->get('email');
-        $usuarios->user = $request->get('user');
-        $usuarios->password = $request->get('password');
+        $users = User::find($id);
+        $users->name = $request->get('name');
+        $users->surname = $request->get('surname');
+        $users->email = $request->get('email');
+        $users->password = Hash::make($request->get('password'));
  
-        $usuarios->update();
+        $users->update();
  
-        return redirect('/usuarios')->with('success','Usuario actualizado correctamente.');
+        return redirect('/users')->with('success','User actualizado correctamente.');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Usuario  $usuario
+     * @param  \App\Models\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Usuario $usuario)
+    public function destroy(User $user)
     {
-        $usuario->delete();
+        $user->delete();
   
-        return redirect('/usuarios')->with('success','Usuario borrado correctamente.');
+        return redirect('/users')->with('success','User borrado correctamente.');
     }
 }
