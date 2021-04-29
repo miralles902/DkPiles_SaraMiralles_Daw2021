@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 /* Añadir direcciones de controladores aquí */
 use App\Http\Controllers\UsuarioController; 
-
+use Illuminate\Support\Facades\Auth;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -78,3 +78,8 @@ Route::get('usuarios', [UsuarioController::class, 'index']);
 Route::get('/config', function () {
     return view('configuracion/config');
 });
+
+//ruta para login
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
