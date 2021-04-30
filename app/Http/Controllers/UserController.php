@@ -54,7 +54,7 @@ class UserController extends Controller
         ]);
 
         $user->save();
-        return redirect('/users')->with('success','User creado correctamente.');
+        return redirect('/users')->with('success','Usuario creado correctamente.');
     }
 
     /**
@@ -103,7 +103,7 @@ class UserController extends Controller
  
         $users->update();
  
-        return redirect('/users')->with('success','User actualizado correctamente.');
+        return redirect('/users')->with('success','Usuario actualizado correctamente.');
     }
 
     /**
@@ -116,6 +116,6 @@ class UserController extends Controller
     {
         $user->delete();
   
-        return redirect('/users')->with('success','User borrado correctamente.');
+        return redirect('/users')->with('success','Usuario borrado correctamente.');
     }
 }

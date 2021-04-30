@@ -72,14 +72,16 @@ Route::get('/val/webcams', function () {
 
 /*ruta al archivo controlador de users y a su página*/
 Route::resource('users', UserController::class);
-Route::get('users', [UserController::class, 'index']);
+Route::get('users', [UserController::class, 'index'])->middleware('auth'); 
+/* se agrega ->middleware('auth'); para restringir el acceso solo a usuarios registrados */
 
 /* ruta a la página de configuración */
 Route::get('/config', function () {
     return view('configuracion/config');
 });
 
-//ruta para login
+/* ruta para login */
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
