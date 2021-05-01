@@ -14,7 +14,10 @@
                         </div>
                     @endif
 
-                    {{ __('You are logged in!') }}
+                    <!--{{ __('You are logged in!') }} -->
+                    <a title="users" href="{{ url('/users') }}" target="_self" id="enlaceUsers">Usuarios</a>
+                    <a title="users" href="{{ url('/users') }}" target="_self" id="enlaceUsers">Configuración</a>
+                    <a title="users" href="{{ url('/users') }}" target="_self" id="enlaceUsers">Mercadillo</a>
                 </div>
             </div>
         </div>

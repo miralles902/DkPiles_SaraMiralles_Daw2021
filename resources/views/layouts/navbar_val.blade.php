@@ -60,18 +60,9 @@
     @endguest
     <!-- end boton Login -->
 
-    <!-- Menu -->
-    <nav>
-        <a href="{{ url('/val') }}">Página principal</a>
-        <a class="btn btn-primary" href="{{ url('/val/contacte') }}">Contacte</a>
-        <a class="btn btn-primary" href="{{ url('/val/temps') }}">El temps</a>
-        <a class="btn btn-primary" href="{{ url('/val/galeria') }}">Galeria</a>
-        <a class="btn btn-primary" href="{{ url('/val/mercadillo') }}">Mercadillo</a>
-        <a class="btn btn-primary" href="{{ url('/val/noticies') }}">Noticies</a>
-        <a class="btn btn-primary" href="{{ url('/val/webcams') }}">Webcams</a>
-        <a class="btn btn-primary" href="{{ url('/') }}">Castellano</a>
-    </nav>
-    <!-- end menu -->
+    <!-- idioma -->
+    <a title="castellano" class="btn btn-primary" href="{{ url('/') }}"><img src="{{ asset('img/spain.png') }}" alt="castellano" /></a>
+    <!-- end idioma -->
 
     <!-- Scripts -->
     <script src="{{ asset('js/modoClaroOscuro.js') }}"></script>
