@@ -31,19 +31,25 @@
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Nombre:</strong>
-                <input type="text" name="name" class="form-control" placeholder="{{ $user->name }}">
+                <input type="text" name="name" class="form-control" value="{{ $user->name }}">
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Apellidos:</strong>
-                <input type="text" name="surname" class="form-control" placeholder="{{ $user->surname }}">
+                <input type="text" name="surname" class="form-control" value="{{ $user->surname }}">
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>Tipo de usuario:</strong>
+                <input type="text" name="tipo_usuario" class="form-control" value="{{ $user->tipo_usuario }}">
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Email:</strong>
-                <input type="text" name="email" class="form-control" placeholder="{{ $user->email }}">
+                <input type="text" name="email" class="form-control" value="{{ $user->email }}">
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">

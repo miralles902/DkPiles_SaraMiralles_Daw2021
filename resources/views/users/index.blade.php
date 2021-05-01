@@ -26,9 +26,9 @@
         <th>Nombre</th>
         <th>Apellidos</th>
         <th>Email</th>
-        <th>Contraseña</th>
+        
         <th>Tipo de usuario</th>
-        <th width="280px">Acciones</th>
+        <th width="25%">Acciones</th>
     </tr>
     @foreach ($users as $usuario)
     <tr>
@@ -36,7 +36,7 @@
         <td>{{ $usuario->name }}</td>
         <td>{{ $usuario->surname }}</td>
         <td>{{ $usuario->email }}</td>
-        <td>{{ $usuario->password }}</td>
+
         <td>{{ $usuario->tipo_usuario }}</td>
         <td>
             <form action="{{ route('users.destroy',$usuario->id) }}" method="POST">

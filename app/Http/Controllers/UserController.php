@@ -99,6 +99,7 @@ class UserController extends Controller
         $users->name = $request->get('name');
         $users->surname = $request->get('surname');
         $users->email = $request->get('email');
+        $users->tipo_usuario = $request->get('tipo_usuario');
         $users->password = Hash::make($request->get('password'));
  
         $users->update();
