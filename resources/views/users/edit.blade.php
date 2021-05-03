@@ -63,6 +63,5 @@
                 <button type="reset" class="btn btn-primary">Borra los datos</button>
         </div>
     </div>
-   
     </form>
 @endsection

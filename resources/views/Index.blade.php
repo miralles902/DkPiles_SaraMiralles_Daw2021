@@ -1,3 +1,5 @@
 @extends('layouts.navbar')
-@extends('layouts.menu')
 @section('title', 'Principal')
+@section('content_page')
+<p>Prueba</p>
+@endsection

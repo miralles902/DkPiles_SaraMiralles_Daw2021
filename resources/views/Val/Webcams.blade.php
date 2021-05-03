@@ -1,3 +1,5 @@
 @extends('layouts.navbar_val')
 @section('title', 'Webcams')
-@extends('layouts.menu_val')
+@section('content_page')
+<p>Prueba</p>
+@endsection

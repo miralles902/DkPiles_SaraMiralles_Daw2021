@@ -18,7 +18,7 @@
 
     <!-- Styles -->
     <link rel="stylesheet" href="{{ URL::asset('css/style_index.css') }}">
-    
+
 
     <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
@@ -26,6 +26,7 @@
 </head>
 
 <body>
+    <header>
     <h1>@yield('title')</h1>
 
     <!-- boton modo oscuro -->
@@ -63,8 +64,23 @@
     <!-- idioma -->
     <a title="valencia" class="btn btn-primary" href="{{ url('/val') }}"><img src="{{ asset('img/valencia.png') }}" alt="Valencia" /></a>
     <!-- end idioma -->
-
-
+    </header>
+    <main>
+    @yield('content_page')
+    </main>
+    <footer>
+    <!-- Menu -->
+    <nav>
+        <a href="{{ url('/') }}">Página principal</a>
+        <a class="btn btn-primary" href="{{ url('/contacto') }}">Contacto</a>
+        <a class="btn btn-primary" href="{{ url('/tiempo') }}">El tiempo</a>
+        <a class="btn btn-primary" href="{{ url('/galeria') }}">Galeria</a>
+        <a class="btn btn-primary" href="{{ url('/mercadillo') }}">Mercadillo</a>
+        <a class="btn btn-primary" href="{{ url('/noticias') }}">Noticias</a>
+        <a class="btn btn-primary" href="{{ url('/webcams') }}">Webcams</a>
+    </nav>
+    <!-- end menu -->
+    </footer>
     <!-- Scripts -->
     <script src="{{ asset('js/modoClaroOscuro.js') }}"></script>
 </body>

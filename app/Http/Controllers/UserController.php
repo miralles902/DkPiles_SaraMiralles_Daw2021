@@ -115,8 +115,13 @@ class UserController extends Controller
      */
     public function destroy(User $user)
     {
+        if($user->tipo_usuario == 0){
         $user->delete();
   
         return redirect('/users')->with('success','Usuario borrado correctamente.');
+    }
+    else{
+        return redirect('/users')->with('success','El usuario es administrador y no se puede borrar, cambie en la configuración el tipo de usuario.');
+    }
     }
 }

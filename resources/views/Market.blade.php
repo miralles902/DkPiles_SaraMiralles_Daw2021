@@ -1,3 +1,5 @@
 @extends('layouts.navbar')
 @section('title', 'Mercadillo')
-@extends('layouts.menu')
+@section('content_page')
+<p>Prueba</p>
+@endsection
