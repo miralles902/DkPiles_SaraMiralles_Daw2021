@@ -1,5 +1,5 @@
 //Configuramos Variables para nuestros id
-let clubCambio = $("a#clubActivar");
+/*let clubCambio = $("a#clubActivar");
 let clubDesactivar = $("a#clubDesactivar");
 //configuracion de los botones (activar desactivar)
 $(function() {
@@ -16,4 +16,4 @@ $(function() {
             clubDesactivar.removeClass('btn btn-danger').addClass('btn btn-info').removeAttr('id').attr('id', 'clubActivar').html('Activar');
         });
     }
-});
+}); */

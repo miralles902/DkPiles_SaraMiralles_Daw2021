@@ -70,18 +70,30 @@ Route::get('/val/webcams', function () {
     return view('/Val/webcams');
 });
 
-/*ruta al archivo controlador de users y a su página*/
-Route::resource('users', UserController::class);
-Route::get('users', [UserController::class, 'index'])->middleware('auth'); 
-/* se agrega ->middleware('auth'); para restringir el acceso solo a usuarios registrados */
-
-/* ruta a la página de configuración */
-Route::get('/config', function () {
-    return view('configuracion/config');
-});
-
 /* ruta para login */
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
+/* Grupo de rutas permitidas solo para administradores */
+Route::group(['middleware' => 'admin'], function () {
+
+    /*ruta al archivo controlador de users y a su página*/
+    Route::resource('users', UserController::class);
+    Route::get('users', [UserController::class, 'index']); 
+   
+    /* ruta a la página de configuración */
+    Route::get('/config', function () {
+        return view('configuracion/config');
+    });
+    
+    });
+    
+/* rutas para editores */
+
+/* ruta para mercadillo */
+//Route::get('ventas', [VentaController::class, 'index'])->middleware('auth'); 
+/*
+Se agrega ->middleware('auth'); para restringir el acceso solo a usuarios registrados,
+en este caso editores.
+*/
