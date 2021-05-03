@@ -27,59 +27,65 @@
 
 <body>
     <header>
-    <h1>@yield('title')</h1>
+        <h1>@yield('title')</h1>
 
-    <!-- boton modo oscuro -->
-    <button class="switch" id="switch">
-        <span><i class="fas fa-sun"></i></span>
-        <span><i class="fas fa-moon"></i></span>
-    </button>
-    <!-- end boton modo oscuro -->
+        <!-- boton modo oscuro -->
+        <button class="switch" id="switch">
+            <span><i class="fas fa-sun"></i></span>
+            <span><i class="fas fa-moon"></i></span>
+        </button>
+        <!-- end boton modo oscuro -->
 
-    <!-- boton Whatsapp -->
-    <a title="whatsapp" href="https://wa.me/+34622861169/?text=Me%20gustaría%20ponerme%20en%20contacto%20con%20vosotros" target="_blank" id="enlaceWhatsapp"><i class="fab fa-whatsapp"></i></a>
-    <!-- end boton Whatsapp -->
+        <!-- boton Whatsapp -->
+        <a title="whatsapp" href="https://wa.me/+34622861169/?text=Me%20gustaría%20ponerme%20en%20contacto%20con%20vosotros" target="_blank" id="enlaceWhatsapp"><i class="fab fa-whatsapp"></i></a>
+        <!-- end boton Whatsapp -->
 
-    <!-- boton Login -->
-    @guest
-    <!-- si no esta logueado se muestra una llave a la página de login-->
-    <a title="login" href="{{ url('/login') }}" target="_self" id="enlaceLogin"><i class="fas fa-key"></i></a>
-    @else
-    <!-- si esta logueado se muestra el nombre o salir de sesion-->
-    <a id="navbarDropdown" class="nav-link dropdown-toggle" href="{{ route('login') }}" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-        {{ Auth::user()->name }}
-    </a>
+        <!-- boton Login -->
+        @guest
+        <!-- si no esta logueado se muestra una llave a la página de login-->
+        <a title="login" href="{{ url('/login') }}" target="_self" id="enlaceLogin"><i class="fas fa-key"></i></a>
+        @else
+        <!-- si esta logueado se muestra el nombre o salir de sesion-->
+         @if(Auth::user()->tipo_usuario)
+            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="{{ url('/homeAdmin') }}" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+            {{ Auth::user()->name }}
+            </a>
+            @else
+            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="{{ url('/home') }}" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+            {{ Auth::user()->name }}
+            </a>
+            @endif
 
-    <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
+        <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-        {{ __('Salir') }}
-    </a>
+            {{ __('Salir') }}
+        </a>
 
-    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-        @csrf
-    </form>
-    @endguest
-    <!-- end boton Login -->
+        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+            @csrf
+        </form>
+        @endguest
+        <!-- end boton Login -->
 
-    <!-- idioma -->
-    <a title="valencia" class="btn btn-primary" href="{{ url('/val') }}"><img src="{{ asset('img/valencia.png') }}" alt="Valencia" /></a>
-    <!-- end idioma -->
+        <!-- idioma -->
+        <a title="valencia" class="btn btn-primary" href="{{ url('/val') }}"><img src="{{ asset('img/valencia.png') }}" alt="Valencia" /></a>
+        <!-- end idioma -->
     </header>
     <main>
-    @yield('content_page')
+        @yield('content_page')
     </main>
     <footer>
-    <!-- Menu -->
-    <nav>
-        <a href="{{ url('/') }}">Página principal</a>
-        <a class="btn btn-primary" href="{{ url('/contacto') }}">Contacto</a>
-        <a class="btn btn-primary" href="{{ url('/tiempo') }}">El tiempo</a>
-        <a class="btn btn-primary" href="{{ url('/galeria') }}">Galeria</a>
-        <a class="btn btn-primary" href="{{ url('/mercadillo') }}">Mercadillo</a>
-        <a class="btn btn-primary" href="{{ url('/noticias') }}">Noticias</a>
-        <a class="btn btn-primary" href="{{ url('/webcams') }}">Webcams</a>
-    </nav>
-    <!-- end menu -->
+        <!-- Menu -->
+        <nav>
+            <a href="{{ url('/') }}">Página principal</a>
+            <a class="btn btn-primary" href="{{ url('/contacto') }}">Contacto</a>
+            <a class="btn btn-primary" href="{{ url('/tiempo') }}">El tiempo</a>
+            <a class="btn btn-primary" href="{{ url('/galeria') }}">Galeria</a>
+            <a class="btn btn-primary" href="{{ url('/mercadillo') }}">Mercadillo</a>
+            <a class="btn btn-primary" href="{{ url('/noticias') }}">Noticias</a>
+            <a class="btn btn-primary" href="{{ url('/webcams') }}">Webcams</a>
+        </nav>
+        <!-- end menu -->
     </footer>
     <!-- Scripts -->
     <script src="{{ asset('js/modoClaroOscuro.js') }}"></script>

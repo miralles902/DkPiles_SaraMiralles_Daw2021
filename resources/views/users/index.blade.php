@@ -63,6 +63,10 @@
 
 <br>
 <div class="pull-left">
-    <a class="btn btn-primary" href="{{ url('/') }}">Volver a página principal</a>
+@if(Auth::user()->tipo_usuario)
+    <a class="btn btn-primary" href="{{ url('/homeAdmin') }}">Volver al panel</a>
+@else
+    <a class="btn btn-primary" href="{{ url('/home') }}">Volver al panel</a>
+@endif
 </div>
 @endsection

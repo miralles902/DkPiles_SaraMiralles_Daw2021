@@ -16,8 +16,8 @@ class UserController extends Controller
     public function index()
     {
         $users = User::latest()->paginate(5);
-  
-        return view('users.index',compact('users','users'))
+
+        return view('users.index', compact('users', 'users'))
             ->with('i', (request()->input('page', 1) - 1) * 5);
     }
 
@@ -45,16 +45,16 @@ class UserController extends Controller
             'email' => 'required',
             'password' => 'required',
         ]);
-  
+
         $user = new User([
             'name' => $request->get('name'),
-            'surname'=> $request->get('surname'),
-            'email'=> $request->get('email'),
+            'surname' => $request->get('surname'),
+            'email' => $request->get('email'),
             'password' => Hash::make($request->get('password')),
         ]);
 
         $user->save();
-        return redirect('/users')->with('success','Usuario creado correctamente.');
+        return redirect('/users')->with('success', 'Usuario creado correctamente.');
     }
 
     /**
@@ -65,7 +65,7 @@ class UserController extends Controller
      */
     public function show(User $user)
     {
-        return view('users.show',compact('user'));
+        return view('users.show', compact('user'));
     }
 
     /**
@@ -76,7 +76,7 @@ class UserController extends Controller
      */
     public function edit(User $user)
     {
-        return view('users.edit',compact('user'));
+        return view('users.edit', compact('user'));
     }
 
     /**
@@ -94,17 +94,17 @@ class UserController extends Controller
             'email' => 'required',
             'password' => 'required',
         ]);
-  
+
         $users = User::find($id);
         $users->name = $request->get('name');
         $users->surname = $request->get('surname');
         $users->email = $request->get('email');
         $users->tipo_usuario = $request->get('tipo_usuario');
         $users->password = Hash::make($request->get('password'));
- 
+
         $users->update();
- 
-        return redirect('/users')->with('success','Usuario actualizado correctamente.');
+
+        return redirect('/users')->with('success', 'Usuario actualizado correctamente.');
     }
 
     /**
@@ -115,13 +115,12 @@ class UserController extends Controller
      */
     public function destroy(User $user)
     {
-        if($user->tipo_usuario == 0){
-        $user->delete();
-  
-        return redirect('/users')->with('success','Usuario borrado correctamente.');
-    }
-    else{
-        return redirect('/users')->with('success','El usuario es administrador y no se puede borrar, cambie en la configuración el tipo de usuario.');
-    }
+        if ($user->tipo_usuario == 0) {
+            $user->delete();
+
+            return redirect('/users')->with('success', 'Usuario borrado correctamente.');
+        } else {
+            return redirect('/users')->with('success', 'El usuario es administrador y no se puede borrar, cambie en la configuración el tipo de usuario.');
+        }
     }
 }

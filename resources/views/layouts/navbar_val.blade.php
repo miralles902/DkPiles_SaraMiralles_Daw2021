@@ -46,9 +46,15 @@
     <a title="login" href="{{ url('/login') }}" target="_self" id="enlaceLogin"><i class="fas fa-key"></i></a>
     @else
     <!-- si esta logueado se muestra el nombre o salir de sesion-->
-    <a id="navbarDropdown" class="nav-link dropdown-toggle" href="{{ route('login') }}" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-        {{ Auth::user()->name }}
-    </a>
+            @if(Auth::user()->tipo_usuario)
+            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="{{ url('/homeAdmin') }}" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+            {{ Auth::user()->name }}
+            </a>
+            @else
+            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="{{ url('/home') }}" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+            {{ Auth::user()->name }}
+            </a>
+            @endif
 
     <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">

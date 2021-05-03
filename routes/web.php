@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 /* Añadir direcciones de controladores aquí */
-use App\Http\Controllers\UserController; 
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Auth;
 /*
 |--------------------------------------------------------------------------
@@ -16,6 +16,7 @@ use Illuminate\Support\Facades\Auth;
 */
 
 /*paginas web principal (index)*/
+
 Route::get('/', function () {
     return view('index');
 });
@@ -80,19 +81,21 @@ Route::group(['middleware' => 'admin'], function () {
 
     /*ruta al archivo controlador de users y a su página*/
     Route::resource('users', UserController::class);
-    Route::get('users', [UserController::class, 'index']); 
-   
+    Route::get('users', [UserController::class, 'index']);
+
+    /* ruta de home para administradores */
+    Route::get('/homeAdmin', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
     /* ruta a la página de configuración */
     Route::get('/config', function () {
         return view('configuracion/config');
     });
-    
-    });
+});
     
 /* rutas para editores */
 
 /* ruta para mercadillo */
-//Route::get('ventas', [VentaController::class, 'index'])->middleware('auth'); 
+//Route::get('ventas', [VentasController::class, 'layout'])->middleware('auth');  
 /*
 Se agrega ->middleware('auth'); para restringir el acceso solo a usuarios registrados,
 en este caso editores.

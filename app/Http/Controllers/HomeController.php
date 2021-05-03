@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Providers\RouteServiceProvider;
+use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
@@ -23,6 +26,9 @@ class HomeController extends Controller
      */
     public function index()
     {
+        if(Auth::user()->tipo_usuario){ //si administrador es true
+            return view('homeAdmin'); //cambiar ruta por la de gestion de usuarios
+        }
         return view('home');
     }
 }

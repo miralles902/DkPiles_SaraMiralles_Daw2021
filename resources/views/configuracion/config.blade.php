@@ -79,8 +79,8 @@
         </td>
     </tr>
 </table>
-<div class="col-lg-11">
-<a class="btn btn-primary" href="{{ url('/') }}">Volver a página principal</a>
+<div class="pull-left">
+    <a class="btn btn-primary" href="{{ url('/home') }}">Volver al panel</a>
 </div>
 <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
 <script src="{{ asset('js/botonesConfig.js') }}"></script>
