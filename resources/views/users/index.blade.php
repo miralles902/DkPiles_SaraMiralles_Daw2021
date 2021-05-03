@@ -37,7 +37,11 @@
         <td>{{ $usuario->surname }}</td>
         <td>{{ $usuario->email }}</td>
 
-        <td>{{ $usuario->tipo_usuario }}</td>
+        <td>@if (($usuario->tipo_usuario) === 1)
+            Administrador
+            @elseif (($usuario->tipo_usuario) === 0)
+            Editor
+            @endif</td>
         <td>
             <form action="{{ route('users.destroy',$usuario->id) }}" method="POST">
 

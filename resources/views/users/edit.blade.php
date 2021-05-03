@@ -1,33 +1,33 @@
 @extends('users.layout')
-   
+
 @section('content')
-    <div class="row">
-        <div class="col-lg-12 margin-tb">
-            <div class="pull-left">
-                <h2>Editar datos de {{ $user->name }} {{ $user->surname }}</h2>
-            </div>
-            <div class="pull-right">
+<div class="row">
+    <div class="col-lg-12 margin-tb">
+        <div class="pull-left">
+            <h2>Editar datos de {{ $user->name }} {{ $user->surname }}</h2>
+        </div>
+        <div class="pull-right">
             <a class="btn btn-primary" href="{{ url('users') }}">Atrás</a>
-            </div>
         </div>
     </div>
-   
-    @if ($errors->any())
-        <div class="alert alert-danger">
-            <strong>Whoops!</strong> There were some problems with your input.<br><br>
-            <ul>
-                @foreach ($errors->all() as $error)
-                    <li>{{ $error }}</li>
-                @endforeach
-            </ul>
-        </div>
-    @endif
-  
-    <form action="{{ route('users.update',$user->id) }}" method="POST">
-        @csrf
-        @method('PUT')
-   
-        <div class="row">
+</div>
+
+@if ($errors->any())
+<div class="alert alert-danger">
+    <strong>Whoops!</strong> There were some problems with your input.<br><br>
+    <ul>
+        @foreach ($errors->all() as $error)
+        <li>{{ $error }}</li>
+        @endforeach
+    </ul>
+</div>
+@endif
+
+<form action="{{ route('users.update',$user->id) }}" method="POST">
+    @csrf
+    @method('PUT')
+
+    <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Nombre:</strong>
@@ -40,12 +40,13 @@
                 <input type="text" name="surname" class="form-control" value="{{ $user->surname }}">
             </div>
         </div>
-        <div class="col-xs-12 col-sm-12 col-md-12">
+       <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Tipo de usuario:</strong>
                 <input type="text" name="tipo_usuario" class="form-control" value="{{ $user->tipo_usuario }}">
             </div>
-        </div>
+        </div> 
+
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Email:</strong>
@@ -55,13 +56,13 @@
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Contraseña:</strong>
-                <input type="text" name="password" class="form-control" placeholder="{{ $user->password }}">
+                <input type="text" name="password" class="form-control" value="{{ $user->password }}">
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12 text-center">
-                <button type="submit" class="btn btn-primary">Añade</button>
-                <button type="reset" class="btn btn-primary">Borra los datos</button>
+            <button type="submit" class="btn btn-primary">Añade</button>
+            <button type="reset" class="btn btn-primary">Borra los datos</button>
         </div>
     </div>
-    </form>
+</form>
 @endsection
