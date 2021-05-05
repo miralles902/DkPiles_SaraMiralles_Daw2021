@@ -40,12 +40,16 @@
                 <input type="text" name="surname" class="form-control" value="{{ $user->surname }}">
             </div>
         </div>
-       <div class="col-xs-12 col-sm-12 col-md-12">
+ 
+        <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Tipo de usuario:</strong>
-                <input type="text" name="tipo_usuario" class="form-control" value="{{ $user->tipo_usuario }}">
+                <select class="form-control" name="tipo_usuario">
+                    <option value="1"{{ $user->tipo_usuario == 1 ? 'selected' : ''}}>Administrador</option>
+                    <option value="0"{{ $user->tipo_usuario == 0 ? 'selected' : '' }}>Editor</option>
+                </select>
             </div>
-        </div> 
+        </div>
 
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
