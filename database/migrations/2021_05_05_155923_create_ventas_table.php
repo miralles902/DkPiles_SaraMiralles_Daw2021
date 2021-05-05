@@ -14,13 +14,15 @@ class CreateVentasTable extends Migration
     public function up()
     {
         Schema::create('ventas', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->string('autor');
+            $table->id();
             $table->string('titulo');
+            $table->string('autor');
             $table->string('cuerpo');
-            $table->string('datos');
-            $table->integer('foto')->unsigned();
-            $table->string('url');
+            $table->integer('precio');
+            $table->string('nombre_vendedor');
+            $table->string('contacto_vendedor');
+            $table->text('detail');
+            $table->string('image');
             $table->timestamps();
         });
     }

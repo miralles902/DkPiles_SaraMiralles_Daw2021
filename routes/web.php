@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 /* Añadir direcciones de controladores aquí */
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\VentaController;
 use Illuminate\Support\Facades\Auth;
 /*
 |--------------------------------------------------------------------------
@@ -95,7 +96,7 @@ Route::group(['middleware' => 'admin'], function () {
 /* rutas para editores */
 
 /* ruta para mercadillo */
-//Route::get('ventas', [VentasController::class, 'layout'])->middleware('auth');  
+Route::resource('ventas', VentaController::class)->middleware('auth');
 /*
 Se agrega ->middleware('auth'); para restringir el acceso solo a usuarios registrados,
 en este caso editores.

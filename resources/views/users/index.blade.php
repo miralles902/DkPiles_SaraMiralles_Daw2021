@@ -28,7 +28,7 @@
         <th>Email</th>
         
         <th>Tipo de usuario</th>
-        <th width="25%">Acciones</th>
+        <th>Acciones</th>
     </tr>
     @foreach ($users as $usuario)
     <tr>
