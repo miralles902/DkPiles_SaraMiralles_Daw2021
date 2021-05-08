@@ -16,6 +16,8 @@ use Illuminate\Support\Facades\Auth;
 |
 */
 
+/* ================ Castellano ================  */
+
 /*paginas web principal (index)*/
 
 Route::get('/', function () {
@@ -44,7 +46,7 @@ Route::get('/noticias', function () {
 Route::get('/webcams', function () {
     return view('webcams');
 });
-
+/* ================ Valenciano ================  */
 /*página web principal valenciano*/
 Route::get('/val', function () {
     return view('/Val/index');
@@ -72,15 +74,15 @@ Route::get('/val/webcams', function () {
     return view('/Val/webcams');
 });
 
-/* ruta para ckeditor */
+/* ================  ruta para ckeditor  ================ */
 Route::post('ckeditor/upload', 'CKEditorController@upload')->name('ckeditor.image-upload');
 
-/* ruta para login */
+/* ================  ruta para login  ================ */
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-/* Grupo de rutas permitidas solo para administradores */
+/*  ================ Grupo de rutas permitidas solo para administradores ================  */
 Route::group(['middleware' => 'admin'], function () {
 
     /*ruta al archivo controlador de users y a su página*/
@@ -96,7 +98,7 @@ Route::group(['middleware' => 'admin'], function () {
     });
 });
     
-/* rutas para editores */
+/* ================ rutas para editores ================ */
 
 /* ruta para mercadillo */
 Route::resource('ventas', VentaController::class)->middleware('auth');
