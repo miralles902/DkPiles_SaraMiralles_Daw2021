@@ -37,7 +37,7 @@
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>autor:</strong>
-                    <input type="text" name="autor" value="{{ $venta->autor }}" class="form-control" placeholder="autor">
+                    <input type="text" name="autor" value="{{ $venta->autor }}" class="form-control" readonly>
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
