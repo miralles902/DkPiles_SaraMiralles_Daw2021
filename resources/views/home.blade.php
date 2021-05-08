@@ -8,7 +8,7 @@
                 <div class="card-header">{{ __('Panel de administración del Editor') }}</div>
                 <div class="text-center">
                     <br>
-                    <a title="users" class="btn btn-info" href="{{ url('/users') }}" target="_self" id="enlaceContacto">Mensajes de Contacto</a>
+                    <a title="users" class="btn btn-info" href="{{ url('/contacts') }}" target="_self" id="enlaceContacto">Mensajes de Contacto</a>
                     <a title="users" class="btn btn-info" href="{{ url('/ventas') }}" target="_self" id="enlaceMercadillo">Mercadillo</a>
                 </div>
                 <br>

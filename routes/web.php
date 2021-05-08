@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 /* Añadir direcciones de controladores aquí */
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\VentaController;
+use App\Http\Controllers\ContactController;
 use Illuminate\Support\Facades\Auth;
 /*
 |--------------------------------------------------------------------------
@@ -106,3 +107,5 @@ Route::resource('ventas', VentaController::class)->middleware('auth');
 Se agrega ->middleware('auth'); para restringir el acceso solo a usuarios registrados,
 en este caso editores.
 */
+
+Route::resource('contacts',ContactController::class)->middleware('auth');
