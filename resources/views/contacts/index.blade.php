@@ -38,7 +38,7 @@
 
                 <a class="btn btn-info" href="{{ route('contacts.show',$contacto->id) }}">Ver</a>
 
-                <!-- <a class="btn btn-primary" href="{{ route('contacts.edit',$contacto->id) }}">Contestar</a> -->
+                <a class="btn btn-primary" href="mailto:{{ $contacto->email }}">Responder</a>
 
                 @csrf
                 @method('DELETE')

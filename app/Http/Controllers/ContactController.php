@@ -40,7 +40,7 @@ class ContactController extends Controller
         return redirect()->back()
                         ->with('success','Contact created successfully.');
     }
-
+    
     /**
      * Display the specified resource.
      *
