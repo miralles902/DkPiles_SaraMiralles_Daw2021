@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\DB;
 
 class UserController extends Controller
 {
@@ -15,7 +16,8 @@ class UserController extends Controller
      */
     public function index()
     {
-        $users = User::latest()->paginate(5);
+        
+        $users = User::latest()->simplePaginate(5);
 
         return view('users.index', compact('users', 'users'))
             ->with('i', (request()->input('page', 1) - 1) * 5);

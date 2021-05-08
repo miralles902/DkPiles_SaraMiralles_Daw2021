@@ -9,20 +9,12 @@
 
 </div>
 <div class="col-lg-11">
-    <h2>Configura tus páginas</h2>
+    <h2>Configura las páginas que quieres mostrar</h2>
 </div>
 <table class="table table-bordered">
     <tr>
         <th>Menú</th>
         <th width="200px">Accion</th>
-    </tr>
-    <tr>
-        <td>
-            El club
-        </td>
-        <td>
-            <a class="btn btn-info" href="" id="clubActivar">Activar</a>
-        </td>
     </tr>
     <tr>
         <td>
@@ -83,4 +75,3 @@
     <a class="btn btn-primary" href="{{ url('/home') }}">Volver al panel</a>
 </div>
 <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
-<script src="{{ asset('js/botonesConfig.js') }}"></script>

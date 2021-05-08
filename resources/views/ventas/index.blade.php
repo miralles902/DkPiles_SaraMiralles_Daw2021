@@ -4,7 +4,7 @@
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
-                <h2>DkPiles - Mercadillo</h2>
+                <h2>Administración DKPiles - Mercadillo</h2>
             </div>
             <div class="pull-right">
                 <a class="btn btn-success" href="{{ route('ventas.create') }}"> Crear nueva venta</a>

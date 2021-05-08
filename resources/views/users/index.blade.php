@@ -4,7 +4,7 @@
 <div class="row">
     <div class="col-lg-12 margin-tb">
         <div class="pull-left">
-            <h2>Página de administración DK Piles 2.0</h2>
+            <h2>Administración DKPiles - Usuarios</h2>
         </div>
         <br>
         <div class="pull-right">

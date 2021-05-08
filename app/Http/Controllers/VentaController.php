@@ -14,7 +14,7 @@ class VentaController extends Controller
      */
     public function index()
     {
-        $ventas =Venta::latest()->paginate(5);
+        $ventas =Venta::latest()->simplePaginate(5);
     
         return view('ventas.index',compact('ventas'))
             ->with('i', (request()->input('page', 1) - 1) * 5);
