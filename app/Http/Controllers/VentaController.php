@@ -42,7 +42,6 @@ class VentaController extends Controller
             
             'titulo' => 'required',
             'autor' => 'required',
-            'cuerpo' => 'required',
             'precio' => 'required',
             'nombre_vendedor' => 'required',
             'contacto_vendedor' => 'required',
@@ -99,7 +98,6 @@ class VentaController extends Controller
         $request->validate([
             'titulo' => 'required',
             'autor' => 'required',
-            'cuerpo' => 'required',
             'precio' => 'required',
             'nombre_vendedor' => 'required',
             'contacto_vendedor' => 'required',

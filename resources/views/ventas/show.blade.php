@@ -4,7 +4,7 @@
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
-                <h2> Show Venta</h2>
+                <h2> Ver Venta</h2>
             </div>
             <div class="pull-right">
                 <a class="btn btn-primary" href="{{ route('ventas.index') }}"> Back</a>
@@ -25,12 +25,7 @@
                 {{ $venta->autor }}
             </div>
         </div>
-        <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
-                <strong>cuerpo:</strong>
-                {{ $venta->cuerpo }}
-            </div>
-        </div>
+        
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>precio:</strong>
@@ -52,7 +47,7 @@
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Details:</strong>
-                {{ $venta->detail }}
+                {!! $venta->detail !!}
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">

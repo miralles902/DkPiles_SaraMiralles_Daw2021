@@ -9,6 +9,6 @@ class Venta extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'titulo', 'autor', 'cuerpo', 'precio', 'nombre_vendedor', 'contacto_vendedor', 'detail', 'image'
+        'titulo', 'autor', 'precio', 'nombre_vendedor', 'contacto_vendedor', 'detail', 'image'
     ];
 }

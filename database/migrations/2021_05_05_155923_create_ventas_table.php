@@ -17,7 +17,6 @@ class CreateVentasTable extends Migration
             $table->id();
             $table->string('titulo');
             $table->string('autor');
-            $table->string('cuerpo');
             $table->integer('precio');
             $table->string('nombre_vendedor');
             $table->string('contacto_vendedor');

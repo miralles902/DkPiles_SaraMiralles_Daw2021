@@ -72,6 +72,9 @@ Route::get('/val/webcams', function () {
     return view('/Val/webcams');
 });
 
+/* ruta para ckeditor */
+Route::post('ckeditor/upload', 'CKEditorController@upload')->name('ckeditor.image-upload');
+
 /* ruta para login */
 Auth::routes();
 

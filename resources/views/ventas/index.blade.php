@@ -4,7 +4,7 @@
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
-                <h2>dkPiles</h2>
+                <h2>DkPiles - Mercadillo</h2>
             </div>
             <div class="pull-right">
                 <a class="btn btn-success" href="{{ route('ventas.create') }}"> Crear nueva venta</a>
@@ -21,15 +21,14 @@
     <table class="table table-bordered">
         <tr>
             <th>No</th>
-            <th>titulo</th>
-            <th>autor</th>
-            <th>cuerpo</th>
-            <th>precio</th>
-            <th>nombre_vendedor</th>
-            <th>contacto_vendedor</th>
-            <th>Image</th>
-            <th>Details</th>
-            <th width="280px">Action</th>
+            <th>Imagen</th>
+            <th>Titulo</th>
+            <th>Autor</th>
+            <th>Precio / €</th>
+            <th>Nombre del vendedor</th>
+            <th>Contacto del vendedor</th>
+            <th>Detalles</th>
+            <th>Action</th>
         </tr>
         @foreach ($ventas as $venta)
         <tr>
@@ -37,11 +36,10 @@
             <td><img src="/image/{{ $venta->image }}" width="100px"></td>
             <td>{{ $venta->titulo }}</td>
             <td>{{ $venta->autor }}</td>
-            <td>{{ $venta->cuerpo }}</td>
             <td>{{ $venta->precio }}</td>
             <td>{{ $venta->nombre_vendedor }}</td>
             <td>{{ $venta->contacto_vendedor }}</td>
-            <td>{{ $venta->detail }}</td>
+            <td><div class="module line-clamp">{!! $venta->detail !!}</div></td>
             <td>
                 <form action="{{ route('ventas.destroy',$venta->id) }}" method="POST">
      

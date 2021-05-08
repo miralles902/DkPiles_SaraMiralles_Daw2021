@@ -4,7 +4,7 @@
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
-                <h2>Edit Venta</h2>
+                <h2>Editar Venta</h2>
             </div>
             <div class="pull-right">
                 <a class="btn btn-primary" href="{{ route('ventas.index') }}"> Back</a>
@@ -42,12 +42,6 @@
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                    <strong>cuerpo:</strong>
-                    <input type="text" name="cuerpo" value="{{ $venta->cuerpo }}" class="form-control" placeholder="cuerpo">
-                </div>
-            </div>
-            <div class="col-xs-12 col-sm-12 col-md-12">
-                <div class="form-group">
                     <strong>precio:</strong>
                     <input type="number" name="precio" value="{{ $venta->precio }}" class="form-control" placeholder="precio">
                 </div>
@@ -67,7 +61,7 @@
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Detail:</strong>
-                    <textarea class="form-control" style="height:150px" name="detail" placeholder="Detail">{{ $venta->detail }}</textarea>
+                    <textarea class="ckeditor form-control" style="height:150px" name="detail" placeholder="Detail">{{ $venta->detail }}</textarea>
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
