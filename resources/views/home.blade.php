@@ -1,11 +1,25 @@
 @extends('layouts.app')
 
 @section('content')
+
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Panel de administración del Editor') }}</div>
+                <div class="card-header">{{ __('Panel de administración del Editor') }}
+                    <!-- boton Login -->
+                    <div class="pull-right">
+                        Hola, {{ Auth::user()->name }}
+                        <a href="{{ route('logout') }}" onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                            {{ __('Salir') }}
+                        </a>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                            @csrf
+                        </form>
+                    </div>
+                    <!-- end boton Login -->
+                </div>
                 <div class="text-center">
                     <br>
                     <a title="users" class="btn btn-info" href="{{ url('/contacts') }}" target="_self" id="enlaceContacto">Mensajes de Contacto</a>
