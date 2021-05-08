@@ -15,46 +15,47 @@
     <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>titulo:</strong>
+                <strong>Titulo:</strong>
                 {{ $venta->titulo }}
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>autor:</strong>
+                <strong>Autor:</strong>
                 {{ $venta->autor }}
             </div>
         </div>
         
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>precio:</strong>
+                <strong>Precio:</strong>
                 {{ $venta->precio }}
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>nombre_vendedor:</strong>
+                <strong>Nombre del Vendedor:</strong>
                 {{ $venta->nombre_vendedor }}
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>contacto_vendedor:</strong>
+                <strong>Contacto del vendedor:</strong>
                 {{ $venta->contacto_vendedor }}
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>Details:</strong>
-                {!! $venta->detail !!}
+                <strong>Imagen:</strong>
+                <img src="/image/{{ $venta->image }}" width="500px">
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>Image:</strong>
-                <img src="/image/{{ $venta->image }}" width="500px">
+                <strong>Detalles:</strong>
+                {!! $venta->detail !!}
             </div>
         </div>
+        
     </div>
 @endsection

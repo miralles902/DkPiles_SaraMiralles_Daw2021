@@ -88,7 +88,6 @@
         <!-- end menu -->
     </footer>
     <!-- Scripts -->
-    <script src="{{ asset('js/modoClaroOscuro.js') }}"></script>
+    <script src="{{ asset('js/modoClaroOscuro.js') }}"></script> 
 </body>
-
 </html>
