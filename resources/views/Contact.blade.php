@@ -6,7 +6,7 @@
     <h3>Escríbenos y en breve nos pondremos en contacto contigo</h3>
     <div class="name">
         <label for="name">Nombre<span class="obligatorio">*</span></label>
-        <input type="text" name="name" id="nombre" placeholder="su nombre" maxlength="12" required>
+        <input type="text" name="name" id="nombre" placeholder="su nombre" maxlength="12" autofocus required>
     </div>
     <div class="surname">
         <label for="surname">Apellidos<span class="obligatorio">*</span></label>
@@ -19,6 +19,10 @@
     <div class="asunto">
         <label for="asunto">Mensaje<span class="obligatorio">*</span></label>
         <textarea name="asunto" id="asunto" placeholder="asunto" required></textarea>
+    </div>
+    <div class="NoSpam">
+    <label for="NoSpam" class="escondido">Si ves esto dejame en blanco</label>
+    <input id="NoSpam" name="NoSpam" class="escondido" />
     </div>
     <button type="reset">Restablecer</button>
     <button type="submit">Enviar</button>

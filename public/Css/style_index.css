@@ -2,8 +2,8 @@
 /* Colores del cuerpo */
 body {
   background: #f7ede5;
-  -webkit-transition: .3s ease all;
-  transition: .3s ease all;
+  -webkit-transition: 0.3s ease all;
+  transition: 0.3s ease all;
 }
 
 body.dark {
@@ -19,8 +19,8 @@ body.dark h1 {
 
 /*enlaces*/
 nav {
-  -webkit-transition: .3s ease all;
-  transition: .3s ease all;
+  -webkit-transition: 0.3s ease all;
+  transition: 0.3s ease all;
 }
 
 nav a {
@@ -56,15 +56,15 @@ body.dark nav a:hover {
   width: 30px;
   height: 30px;
   position: absolute;
-  background: #F1F1F1;
+  background: #f1f1f1;
   top: 0;
   left: 0;
   /* Para cuando cambiemos la posición del boton*/
   right: unset;
   /* Para cuando cambiemos la posición del boton*/
   border-radius: 100px;
-  -webkit-transition: .3s ease all;
-  transition: .3s ease all;
+  -webkit-transition: 0.3s ease all;
+  transition: 0.3s ease all;
   -webkit-box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2);
 }
@@ -86,5 +86,9 @@ body.dark nav a:hover {
   display: block;
   background: none;
   color: #fff;
+}
+
+.escondido {
+  display: none;
 }
 /*# sourceMappingURL=style_index.css.map */
