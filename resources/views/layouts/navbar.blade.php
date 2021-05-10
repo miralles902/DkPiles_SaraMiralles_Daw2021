@@ -68,7 +68,7 @@
         <!-- end boton Login -->
 
         <!-- idioma -->
-        <a title="valencia" class="btn btn-primary" href="{{ url('/val') }}"><img src="{{ asset('img/valencia.png') }}" alt="Valencia" /></a>
+        <a title="valencia" href="{{ url('/val') }}"><img src="{{ asset('img/valencia.png') }}" alt="Valencia" /></a>
         <!-- end idioma -->
     </header>
     <main>

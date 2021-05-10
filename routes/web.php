@@ -40,7 +40,8 @@ Route::get('/tiempo', function () {
 });
 Route::get('/mercadillo', function () {
     return view('market');
-});
+}); 
+
 Route::get('/noticias', function () {
     return view('news');
 });

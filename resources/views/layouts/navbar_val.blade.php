@@ -68,7 +68,7 @@
     <!-- end boton Login -->
 
     <!-- idioma -->
-    <a title="castellano" class="btn btn-primary" href="{{ url('/') }}"><img src="{{ asset('img/spain.png') }}" alt="castellano" /></a>
+    <a title="castellano" href="{{ url('/') }}"><img src="{{ asset('img/spain.png') }}" alt="castellano" /></a>
     <!-- end idioma -->
     </header>
     <main>
