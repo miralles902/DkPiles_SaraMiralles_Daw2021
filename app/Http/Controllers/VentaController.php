@@ -21,7 +21,6 @@ class VentaController extends Controller
     }
     public function mercadillo()
     {
-      echo "hola";
         $ventasMercadillo =Venta::latest()->simplePaginate(5);
     //print_r($ventasMercadillo);
 
@@ -29,6 +28,7 @@ class VentaController extends Controller
             ->with('i', (request()->input('page', 1) - 1) * 5);
     }
 
+    
     /**
      * Show the form for creating a new resource.
      *
@@ -84,6 +84,11 @@ class VentaController extends Controller
         return view('ventas.show',compact('venta'));
     }
 
+    public function mercadilloShow(Venta $ventasMercadillo)
+    {
+        return view('mercadilloShow',compact('ventasMercadillo'));
+    }
+    
     /**
      * Show the form for editing the specified resource.
      *

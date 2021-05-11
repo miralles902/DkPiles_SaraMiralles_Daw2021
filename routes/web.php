@@ -38,11 +38,11 @@ Route::get('/login', function () {
 Route::get('/tiempo', function () {
     return view('forecasts');
 });
-/*Route::get('/mercadillo', function () {
-    return view('market');
-}); */
 
+/* rutas para frontend mercadillo */
 Route::get('/mercadillo', [VentaController::class, 'mercadillo']);
+Route::get('/mercadilloShow/{ventasMercadillo}', [VentaController::class, 'mercadilloShow'])->name('mercadilloShow');
+
 
 Route::get('/noticias', function () {
     return view('news');
@@ -68,6 +68,11 @@ Route::get('/val/login', function () {
 Route::get('/val/temps', function () {
     return view('/Val/forecasts');
 });
+
+/* rutas para frontend mercadillo */
+/*Route::get('/mercadillo', [VentaController::class, 'mercadillo']);
+Route::get('/mercadilloShow/{ventasMercadillo}', [VentaController::class, 'mercadilloShow'])->name('mercadilloShow');*/
+
 Route::get('/val/mercadillo', function () {
     return view('/Val/Market');
 });

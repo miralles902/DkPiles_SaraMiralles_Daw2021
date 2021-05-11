@@ -4,11 +4,26 @@ body {
   background: #f7ede5;
   -webkit-transition: 0.3s ease all;
   transition: 0.3s ease all;
+  background: url(../img/fondoClaro.png) no-repeat;
+  width: 90%;
+  height: 100%;
 }
 
 body.dark {
   /* modo oscuro */
-  background: #3a3838;
+  background-color: #3a3838;
+  width: 90%;
+  height: 100%;
+}
+
+body .fa-whatsapp {
+  color: #92d36e;
+  font-size: 30px;
+}
+
+body .fa-key {
+  color: #f1f1f1;
+  font-size: 30px;
 }
 
 /* Titulo H1 de la página*/
@@ -70,8 +85,8 @@ body.dark nav a:hover {
 }
 
 .switch.active {
-  background: orange;
-  color: black;
+  background: #ffa500;
+  color: #000000;
 }
 
 .switch.active::after {

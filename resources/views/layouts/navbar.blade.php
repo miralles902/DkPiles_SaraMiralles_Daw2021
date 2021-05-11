@@ -18,6 +18,7 @@
 
     <!-- Styles -->
     <link rel="stylesheet" href="{{ URL::asset('css/style_index.css') }}">
+    <link rel="stylesheet" href="{{ URL::asset('css/textStyle.css') }}">
 
 
     <!-- Scripts -->
@@ -68,7 +69,7 @@
         <!-- end boton Login -->
 
         <!-- idioma -->
-        <a title="valencia" href="{{ url('/val') }}"><img src="{{ asset('img/valencia.png') }}" alt="Valencia" /></a>
+        <a title="valencia" href="{{ url('/val') }}">Val</a>
         <!-- end idioma -->
     </header>
     <main>

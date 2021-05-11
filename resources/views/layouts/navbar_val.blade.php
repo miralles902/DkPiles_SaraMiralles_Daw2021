@@ -18,6 +18,7 @@
 
     <!-- Styles -->
     <link rel="stylesheet" href="{{ URL::asset('css/style_index.css') }}">
+    <link rel="stylesheet" href="{{ URL::asset('css/textStyle.css') }}">
 
 
     <!-- Scripts -->
@@ -68,7 +69,7 @@
     <!-- end boton Login -->
 
     <!-- idioma -->
-    <a title="castellano" href="{{ url('/') }}"><img src="{{ asset('img/spain.png') }}" alt="castellano" /></a>
+    <a title="castellano" href="{{ url('/') }}">Esp</a>
     <!-- end idioma -->
     </header>
     <main>
