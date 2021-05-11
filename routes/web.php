@@ -38,9 +38,11 @@ Route::get('/login', function () {
 Route::get('/tiempo', function () {
     return view('forecasts');
 });
-Route::get('/mercadillo', function () {
+/*Route::get('/mercadillo', function () {
     return view('market');
-}); 
+}); */
+
+Route::get('/mercadillo', [VentaController::class, 'mercadillo']);
 
 Route::get('/noticias', function () {
     return view('news');

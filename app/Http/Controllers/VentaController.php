@@ -19,6 +19,15 @@ class VentaController extends Controller
         return view('ventas.index',compact('ventas'))
             ->with('i', (request()->input('page', 1) - 1) * 5);
     }
+    public function mercadillo()
+    {
+      echo "hola";
+        $ventasMercadillo =Venta::latest()->simplePaginate(5);
+    //print_r($ventasMercadillo);
+
+        return view('Market',compact('ventasMercadillo'))
+            ->with('i', (request()->input('page', 1) - 1) * 5);
+    }
 
     /**
      * Show the form for creating a new resource.
