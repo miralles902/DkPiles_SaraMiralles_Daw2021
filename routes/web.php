@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\VentaController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\ConfigController;
 use Illuminate\Support\Facades\Auth;
 /*
 |--------------------------------------------------------------------------
@@ -105,8 +106,9 @@ Route::group(['middleware' => 'admin'], function () {
     Route::get('/config', function () {
         return view('configuracion/config');
     });
+    Route::resource('configs', ConfigController::class);
 });
-    
+
 /* ================ rutas para editores ================ */
 
 /* ruta para mercadillo */
@@ -116,4 +118,4 @@ Se agrega ->middleware('auth'); para restringir el acceso solo a usuarios regist
 en este caso editores.
 */
 
-Route::resource('contacts',ContactController::class)->middleware('auth');
+Route::resource('contacts', ContactController::class)->middleware('auth');
