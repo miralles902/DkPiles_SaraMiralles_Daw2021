@@ -50,7 +50,8 @@ class ConfigController extends Controller
      */
     public function edit($id)
     {
-        //
+        $config = Config::find($id);
+        return view('configs.config',compact('id'));
     }
 
     /**
@@ -62,6 +63,10 @@ class ConfigController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $configs = Config::find($id);
+        $configs->category = $request->get('category');
+        $configs->update();
+
+        return redirect('/configs')->with('success', 'menu web actualizado correctamente.');
     }
 }

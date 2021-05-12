@@ -24,6 +24,25 @@
     <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
 
+    <?php
+    //codigo php para conseguir las secciones activas del menu
+    use Illuminate\Support\Facades\DB;
+
+    //select para las categorias de nuestra BD
+    $menu = DB::table('configs')
+        ->select('category')
+        ->get();
+
+        //recorremos el array y mostramos el resultado sin "[", "]", ",", '"'
+    foreach ($menu as $opciones) {
+        $category = $opciones->category;
+        $space   = " "; //mostramos
+        $separator = array("[", "]", ",", '"'); //elementos a eliminar
+        $sections = str_replace($separator, $space, $category);
+        //echo $sections;
+    }
+    ?>
+
 </head>
 
 <body>
@@ -47,15 +66,15 @@
         <a title="login" href="{{ url('/login') }}" target="_self" id="enlaceLogin"><i class="fas fa-key"></i></a>
         @else
         <!-- si esta logueado se muestra el nombre o salir de sesion-->
-         @if(Auth::user()->tipo_usuario)
-            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="{{ url('/homeAdmin') }}" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+        @if(Auth::user()->tipo_usuario)
+        <a id="navbarDropdown" class="nav-link dropdown-toggle" href="{{ url('/homeAdmin') }}" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
             {{ Auth::user()->name }}
-            </a>
-            @else
-            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="{{ url('/home') }}" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+        </a>
+        @else
+        <a id="navbarDropdown" class="nav-link dropdown-toggle" href="{{ url('/home') }}" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
             {{ Auth::user()->name }}
-            </a>
-            @endif
+        </a>
+        @endif
 
         <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
@@ -76,20 +95,22 @@
         @yield('content_page')
     </main>
     <footer>
+        <div id="palabras">{{$sections}}</div>
         <!-- Menu -->
         <nav>
             <a href="{{ url('/') }}">Página principal</a>
-            <a class="btn btn-primary" href="{{ url('/contacto') }}">Contacto</a>
-            <a class="btn btn-primary" href="{{ url('/tiempo') }}">El tiempo</a>
-            <a class="btn btn-primary" href="{{ url('/galeria') }}">Galeria</a>
-            <a class="btn btn-primary" href="{{ url('/mercadillo') }}">Mercadillo</a>
-            <a class="btn btn-primary" href="{{ url('/noticias') }}">Noticias</a>
-            <a class="btn btn-primary" href="{{ url('/webcams') }}">Webcams</a>
+            <a class="btn btn-primary" href="{{ url('/contacto') }}" id="contacto">Contacto</a>
+            <a class="btn btn-primary" href="{{ url('/tiempo') }}" id="tiempo">El tiempo</a>
+            <a class="btn btn-primary" href="{{ url('/galeria') }}" id="galeria">Galeria</a>
+            <a class="btn btn-primary" href="{{ url('/mercadillo') }}" id="mercadillo">Mercadillo</a>
+            <a class="btn btn-primary" href="{{ url('/noticias') }}" id="noticia">Noticias</a>
+            <a class="btn btn-primary" href="{{ url('/webcams') }}" id="webcam">Webcams</a>
         </nav>
         <!-- end menu -->
     </footer>
     <!-- Scripts -->
     <script src="{{ asset('js/modoClaroOscuro.js') }}"></script>
-    <script src="{{ asset('js/validarForm.js') }}"></script> 
+    <script src="{{ asset('js/validarForm.js') }}"></script>
 </body>
+
 </html>

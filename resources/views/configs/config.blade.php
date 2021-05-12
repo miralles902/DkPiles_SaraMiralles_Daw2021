@@ -1,77 +1,45 @@
-@extends('configuracion.layout')
+@extends('configs.layout')
 
 @section('content')
-<div class="row">
-    <div class="col-lg-11">
-        <h1>Administración DKPiles - Configuración del menú</h1>
-
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div id="showimages"></div>
+            </div>
+            <div class="col-md-6 offset-3 mt-5">
+                <div class="card">
+                    <div class="card-header bg-info">
+                        <h6 class="text-white">Editar</h6>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-12 text-right mb-3">
+                                <a href="{{ route('configs.index') }}" class="btn btn-primary">Back</a>
+                            </div>
+                        </div>
+                        <form action="" method="POST">
+                            @csrf
+                            
+                            <div class="form-group">
+                                <label><strong>Category :</strong></label><br>
+                                <label><input type="checkbox" name="category[]" value="contacto"> Contacto</label>
+                                <label><input type="checkbox" name="category[]" value="tiempo"> El Tiempo</label>
+                                <label><input type="checkbox" name="category[]" value="galeria"> Galeria</label>
+                                <label><input type="checkbox" name="category[]" value="mercadillo"> Mercadillo</label>
+                                <label><input type="checkbox" name="category[]" value="noticias"> Noticias</label>
+                                <label><input type="checkbox" name="category[]" value="webcams"> Webcams</label>
+                            </div>  
+                            
+                            <div class="form-group text-center">
+                                <button type="submit" class="btn btn-success btn-sm">Save</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-
-</div>
-<div class="col-lg-11">
-    <h2>Configura las páginas que quieres mostrar</h2>
-</div>
-<table class="table table-bordered">
-    <tr>
-        <th>Menú</th>
-        <th width="200px">Accion</th>
-    </tr>
-    <tr>
-        <td>
-            Contacto
-        </td>
-        <td>
-            <a class="btn btn-info" href="">Activar</a>
-            <a class="btn btn-danger" href="">Desactivar</a>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            + Previsiones
-        </td>
-        <td>
-            <a class="btn btn-info" href="">Activar</a>
-            <a class="btn btn-danger" href="">Desactivar</a>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            Galeria
-        </td>
-        <td>
-            <a class="btn btn-info" href="">Activar</a>
-            <a class="btn btn-danger" href="">Desactivar</a>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            Mercadillo
-        </td>
-        <td>
-            <a class="btn btn-info" href="">Activar</a>
-            <a class="btn btn-danger" href="">Desactivar</a>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            Noticias
-        </td>
-        <td>
-            <a class="btn btn-info" href="">Activar</a>
-            <a class="btn btn-danger" href="">Desactivar</a>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            Webcams
-        </td>
-        <td>
-            <a class="btn btn-info" href="">Activar</a>
-            <a class="btn btn-danger" href="">Desactivar</a>
-        </td>
-    </tr>
-</table>
-<div class="pull-left">
-    <a class="btn btn-primary" href="{{ url('/home') }}">Volver al panel</a>
-</div>
+</body>
+</html>
 <script src="https://code.jquery.com/jquery-3.5.0.js"></script>

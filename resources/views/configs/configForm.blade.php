@@ -15,10 +15,10 @@
                     </div>
                     <div class="card-body">
                         <div class="row">
-                            <div class="col-md-12 text-right mb-12">
+                            <!--<div class="col-md-12 text-right mb-12">
                                 <a class="btn btn-primary" href="{{ url('/home') }}">Volver al panel</a>
                                 <a href="{{ route('configs.create') }}" class="btn btn-success">Create</a>
-                            </div>  
+                            </div>  -->
                         </div>
                         <br>
                         <table class="table table-bordered">
@@ -26,8 +26,11 @@
                                 <th colspan="2">Páginas que se muestran en la web</th>
                             </tr>
                             @foreach($configs as $config)
-
-
+                            <div class="col-md-12 text-right mb-12">
+                            <a class="btn btn-primary" href="{{ url('/home') }}">Volver al panel</a>
+                            <a class="btn btn-success" href="{{ route('configs.edit',$config->id) }}">Modificar</a>
+                            </div> 
+                            <br>
                                     @foreach($config->category as $value)
                                     <tr><td>{{$value}}</td><td><i class="fa fa-check" aria-hidden="true"></i></td></tr>
                                     @endforeach
