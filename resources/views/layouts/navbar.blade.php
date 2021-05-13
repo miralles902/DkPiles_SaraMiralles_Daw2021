@@ -24,6 +24,7 @@
     <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
 
+    <!-- php -->
     <?php
     //codigo php para conseguir las secciones activas del menu
     use Illuminate\Support\Facades\DB;
@@ -33,13 +34,9 @@
         ->select('category')
         ->get();
 
-        //recorremos el array y mostramos el resultado sin "[", "]", ",", '"'
+    //recorremos el array y mostramos el resultado
     foreach ($menu as $opciones) {
         $category = $opciones->category;
-        $space   = " "; //mostramos
-        $separator = array("[", "]", ",", '"'); //elementos a eliminar
-        $sections = str_replace($separator, $space, $category);
-        //echo $sections;
     }
     ?>
 
@@ -95,7 +92,7 @@
         @yield('content_page')
     </main>
     <footer>
-        <div id="palabras">{{$sections}}</div>
+
         <!-- Menu -->
         <nav>
             <a href="{{ url('/') }}">Página principal</a>
@@ -103,14 +100,19 @@
             <a class="btn btn-primary" href="{{ url('/tiempo') }}" id="tiempo">El tiempo</a>
             <a class="btn btn-primary" href="{{ url('/galeria') }}" id="galeria">Galeria</a>
             <a class="btn btn-primary" href="{{ url('/mercadillo') }}" id="mercadillo">Mercadillo</a>
-            <a class="btn btn-primary" href="{{ url('/noticias') }}" id="noticia">Noticias</a>
-            <a class="btn btn-primary" href="{{ url('/webcams') }}" id="webcam">Webcams</a>
+            <a class="btn btn-primary" href="{{ url('/noticias') }}" id="noticias">Noticias</a>
+            <a class="btn btn-primary" href="{{ url('/webcams') }}" id="webcams">Webcams</a>
         </nav>
         <!-- end menu -->
     </footer>
     <!-- Scripts -->
     <script src="{{ asset('js/modoClaroOscuro.js') }}"></script>
     <script src="{{ asset('js/validarForm.js') }}"></script>
+    <script>
+        // accedemos al array
+        let arrayToJs = <?php echo json_encode($category); ?>;
+    </script>
+    <script src="{{ asset('js/mostrarOcultarBotones.js') }}"></script>
 </body>
 
 </html>

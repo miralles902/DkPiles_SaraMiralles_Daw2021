@@ -1,6 +1,7 @@
 @extends('configs.layout')
 
 @section('content')
+
 <body>
     <div class="container">
         <div class="row">
@@ -20,17 +21,20 @@
                         </div>
                         <form action="" method="POST">
                             @csrf
-                            
+
                             <div class="form-group">
-                                <label><strong>Category :</strong></label><br>
+                            <label><strong>Category :</strong></label><br>
+                           <!-- @foreach($config as $configs)
+                                <input type="checkbox" name="category[]" value="{{ $configs->id }}" />
+                            @endforeach -->
                                 <label><input type="checkbox" name="category[]" value="contacto"> Contacto</label>
                                 <label><input type="checkbox" name="category[]" value="tiempo"> El Tiempo</label>
                                 <label><input type="checkbox" name="category[]" value="galeria"> Galeria</label>
                                 <label><input type="checkbox" name="category[]" value="mercadillo"> Mercadillo</label>
                                 <label><input type="checkbox" name="category[]" value="noticias"> Noticias</label>
                                 <label><input type="checkbox" name="category[]" value="webcams"> Webcams</label>
-                            </div>  
-                            
+                            </div>
+
                             <div class="form-group text-center">
                                 <button type="submit" class="btn btn-success btn-sm">Save</button>
                             </div>
@@ -41,5 +45,6 @@
         </div>
     </div>
 </body>
+
 </html>
 <script src="https://code.jquery.com/jquery-3.5.0.js"></script>

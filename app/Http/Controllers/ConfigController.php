@@ -67,6 +67,8 @@ class ConfigController extends Controller
         $configs->category = $request->get('category');
         $configs->update();
 
+        /*Config::findMany($configs)->update(['is_checked' => 1]); */
+
         return redirect('/configs')->with('success', 'menu web actualizado correctamente.');
     }
 }

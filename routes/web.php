@@ -103,10 +103,8 @@ Route::group(['middleware' => 'admin'], function () {
     Route::get('/homeAdmin', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
     /* ruta a la página de configuración */
-    Route::get('/config', function () {
-        return view('configuracion/config');
-    });
     Route::resource('configs', ConfigController::class);
+    
 });
 
 /* ================ rutas para editores ================ */
