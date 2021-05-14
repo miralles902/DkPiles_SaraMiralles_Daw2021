@@ -6,7 +6,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Panel de administración del Editor') }}
+                <div class="card-header"><i class="fas fa-user-edit"></i>{{ __(' Editor') }}
                     <!-- boton Login -->
                     <div class="pull-right">
                         Hola, {{ Auth::user()->name }}

@@ -43,14 +43,14 @@
             <td>
                 <form action="{{ route('ventas.destroy',$venta->id) }}" method="POST">
      
-                    <a class="btn btn-info" href="{{ route('ventas.show',$venta->id) }}">Ver</a>
+                    <a class="btn btn-info" href="{{ route('ventas.show',$venta->id) }}"><i class="fas fa-eye"></i></a>
       
-                    <a class="btn btn-primary" href="{{ route('ventas.edit',$venta->id) }}">Editar</a>
+                    <a class="btn btn-primary" href="{{ route('ventas.edit',$venta->id) }}"><i class="fas fa-pencil-alt"></i></a>
      
                     @csrf
                     @method('DELETE')
         
-                    <button type="submit" class="btn btn-danger">Borrar</button>
+                    <button type="submit" class="btn btn-danger"><i class="fas fa-trash-alt"></i></button>
                 </form>
             </td>
         </tr>

@@ -45,14 +45,14 @@
         <td>
             <form action="{{ route('users.destroy',$usuario->id) }}" method="POST">
 
-                <a class="btn btn-info" href="{{ route('users.show',$usuario->id) }}">Ver</a>
+                <a class="btn btn-info" href="{{ route('users.show',$usuario->id) }}" alt="ver"><i class="fas fa-eye"></i></a>
 
-                <a class="btn btn-primary" href="{{ route('users.edit',$usuario->id) }}">Editar</a>
+                <a class="btn btn-primary" href="{{ route('users.edit',$usuario->id) }}" alt="editar"><i class="fas fa-user-edit"></i></a>
 
                 @csrf
                 @method('DELETE')
 
-                <button type="submit" class="btn btn-danger">Borrar</button>
+                <button type="submit" class="btn btn-danger" alt="borrar"><i class="fas fa-user-times"></i></button>
             </form>
         </td>
     </tr>

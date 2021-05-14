@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Panel de administración del Administrador') }}
+                <div class="card-header"><i class="fas fa-crown"></i>{{ __(' Administrador') }}
                     <!-- boton Login -->
                     <div class="pull-right">
                         Hola, {{ Auth::user()->name }}
@@ -25,6 +25,7 @@
                     <a title="users" class="btn btn-info" href="{{ url('/contacts') }}" target="_self" id="enlaceContacto">Mensajes de Contacto</a>
                     <a title="users" class="btn btn-info" href="{{ url('/configs') }}" target="_self" id="enlaceConfig">Configuración</a>
                     <a title="users" class="btn btn-info" href="{{ url('/ventas') }}" target="_self" id="enlaceMercadillo">Mercadillo</a>
+                    <a title="users" class="btn btn-info" href="{{ url('/ventas') }}" target="_self" id="enlaceMercadillo">Noticias</a>
                 </div>
                 <br>
             </div>

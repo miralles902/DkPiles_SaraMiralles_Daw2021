@@ -11,7 +11,7 @@
             <div class="col-md-6 offset-3 mt-5">
                 <div class="card">
                     <div class="card-header bg-info">
-                        <h6 class="text-white">Editar</h6>
+                        <h6 class="text-white">Configura las paginas que quieres guardar</h6>
                     </div>
                     <div class="card-body">
                         <div class="row">
@@ -24,9 +24,8 @@
 
                             <div class="form-group">
                             <label><strong>Category :</strong></label><br>
-                           <!-- @foreach($config as $configs)
-                                <input type="checkbox" name="category[]" value="{{ $configs->id }}" />
-                            @endforeach -->
+                           
+                           
                                 <label><input type="checkbox" name="category[]" value="contacto"> Contacto</label>
                                 <label><input type="checkbox" name="category[]" value="tiempo"> El Tiempo</label>
                                 <label><input type="checkbox" name="category[]" value="galeria"> Galeria</label>
