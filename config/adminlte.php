@@ -235,6 +235,11 @@ return [
             'url'  => '/',
             'icon' => 'fas fa-home',
         ],
+        [
+            'text' => 'Administracion',
+            'url'  => '/home',
+            'icon' => 'fas fa-user-shield',
+        ],
         ['header' => 'Ajustes de la cuenta'],
         [
             'text' => 'Perfil',
