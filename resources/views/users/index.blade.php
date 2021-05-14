@@ -1,10 +1,12 @@
-@extends('users.layout')
+@extends('adminlte::page')
+
+@section('title', 'Usuarios')
 
 @section('content')
 <div class="row">
     <div class="col-lg-12 margin-tb">
         <div class="pull-left">
-            <h2>Administración DKPiles - Usuarios</h2>
+            <h2>Listado de Usuarios</h2>
         </div>
         <br>
         <div class="pull-right">

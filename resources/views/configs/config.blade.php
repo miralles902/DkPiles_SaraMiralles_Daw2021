@@ -1,4 +1,6 @@
-@extends('configs.layout')
+@extends('adminlte::page')
+
+@section('title', 'Modifica tus secciones')
 
 @section('content')
 
@@ -47,3 +49,4 @@
 
 </html>
 <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+@endsection

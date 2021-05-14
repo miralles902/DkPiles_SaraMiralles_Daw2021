@@ -1,4 +1,6 @@
-@extends('ventas.layout')
+@extends('adminlte::page')
+
+@section('title', 'Ver Venta')
    
 @section('content')
     <div class="row">

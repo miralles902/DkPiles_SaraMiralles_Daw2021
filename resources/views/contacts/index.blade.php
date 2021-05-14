@@ -1,14 +1,15 @@
-@extends('contacts.layout')
+@extends('adminlte::page')
+
+@section('title', 'Mensajes')
 
 @section('content')
-<div class="row">
-    <div class="col-lg-12 margin-tb">
-        <div class="pull-left">
-            <h2>Administración - Contacto</h2>
-        </div>
-    </div>
-</div>
+<!DOCTYPE html>
+<head>
+<!-- Styles -->
+<link rel="stylesheet" href="{{ URL::asset('css/textStyle.css') }}">
 
+</head>
+<body>
 @if ($message = Session::get('success'))
 <div class="alert alert-success">
     <p>{{ $message }}</p>
@@ -60,4 +61,6 @@
     <a class="btn btn-primary" href="{{ url('/home') }}">Volver al panel</a>
     @endif
 </div>
+</body>
+</Dhtml>
 @endsection

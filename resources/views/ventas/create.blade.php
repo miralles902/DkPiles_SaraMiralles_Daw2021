@@ -1,6 +1,14 @@
-@extends('ventas.layout')
+@extends('adminlte::page')
 
+@section('title', 'Crear Venta')
+     
 @section('content')
+<!DOCTYPE html>
+<head>
+<!-- ckeditor template -->
+<script src="//cdn.ckeditor.com/4.14.1/standard/ckeditor.js"></script>
+</head>
+<body>
 <div class="row">
     <div class="col-lg-12 margin-tb">
         <div class="pull-left">
@@ -53,13 +61,13 @@
             <div class="form-group">
 
                 <strong>Nombre del Vendedor:</strong>
-                <input type="text" name="nombre_vendedor" class="form-control" placeholder="nombre_vendedor">
+                <input type="text" name="nombre_vendedor" class="form-control" placeholder="nombre vendedor">
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Contacto del vendedor:</strong>
-                <input type="text" name="contacto_vendedor" class="form-control" placeholder="contacto_vendedor">
+                <input type="text" name="contacto_vendedor" class="form-control" placeholder="contacto vendedor">
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
@@ -80,4 +88,18 @@
     </div>
 
 </form>
+</body>
+<!-- Ckeditor script -->
+<script src="//cdn.ckeditor.com/4.14.1/standard/ckeditor.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('.ckeditor').ckeditor();
+    });
+
+    CKEDITOR.replace('wysiwyg-editor', {
+        filebrowserUploadUrl: "{{route('ckeditor.image-upload', ['_token' => csrf_token() ])}}",
+        filebrowserUploadMethod: 'form'
+    });
+</script>
+</html>
 @endsection

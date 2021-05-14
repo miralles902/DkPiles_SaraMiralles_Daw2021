@@ -1,17 +1,22 @@
-@extends('ventas.layout')
-     
+@extends('adminlte::page')
+
+@section('title', 'Mercadillo')
+
 @section('content')
+<!DOCTYPE html>
+<head>
+<!-- Styles -->
+<link rel="stylesheet" href="{{ URL::asset('css/textStyle.css') }}">
+
+</head>
     <div class="row">
         <div class="col-lg-12 margin-tb">
-            <div class="pull-left">
-                <h2>Administración DKPiles - Mercadillo</h2>
-            </div>
             <div class="pull-right">
                 <a class="btn btn-success" href="{{ route('ventas.create') }}"> Crear nueva venta</a>
             </div>
         </div>
     </div>
-    
+    <br>
     @if ($message = Session::get('success'))
         <div class="alert alert-success">
             <p>{{ $message }}</p>
@@ -65,4 +70,6 @@
     <a class="btn btn-primary" href="{{ url('/home') }}">Volver al panel</a>
 @endif
 </div>
+</body>
+</html>
 @endsection

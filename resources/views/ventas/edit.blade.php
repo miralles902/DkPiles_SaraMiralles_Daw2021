@@ -1,15 +1,20 @@
-@extends('ventas.layout')
+@extends('adminlte::page')
+
+@section('title', 'Editar Venta')
      
 @section('content')
+<!DOCTYPE html>
+<head>
+<!-- ckeditor template -->
+<script src="//cdn.ckeditor.com/4.14.1/standard/ckeditor.js"></script>
+</head>
+<body>
     <div class="row">
-        <div class="col-lg-12 margin-tb">
-            <div class="pull-left">
-                <h2>Editar Venta</h2>
-            </div>
+        
             <div class="pull-right">
-                <a class="btn btn-primary" href="{{ route('ventas.index') }}"> Back</a>
+                <a class="btn btn-primary" href="{{ route('ventas.index') }}">Volver al panel</a>
             </div>
-        </div>
+
     </div>
      
     @if ($errors->any())
@@ -77,4 +82,18 @@
         </div>
      
     </form>
+</body>
+<!-- Ckeditor script -->
+<script src="//cdn.ckeditor.com/4.14.1/standard/ckeditor.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('.ckeditor').ckeditor();
+    });
+
+    CKEDITOR.replace('wysiwyg-editor', {
+        filebrowserUploadUrl: "{{route('ckeditor.image-upload', ['_token' => csrf_token() ])}}",
+        filebrowserUploadMethod: 'form'
+    });
+</script>
+</html>
 @endsection

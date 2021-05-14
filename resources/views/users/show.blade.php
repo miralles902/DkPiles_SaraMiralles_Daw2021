@@ -1,4 +1,6 @@
-@extends('users.layout')
+@extends('adminlte::page')
+
+@section('title', 'Ver Usuario')
 @section('content')
 <div class="row">
     <div class="col-lg-12 margin-tb">
@@ -54,12 +56,6 @@
             @else
             {{ $user->updated_at }}
             @endif  
-        </div>
-    </div>
-    <div class="col-xs-12 col-sm-12 col-md-12">
-        <div class="form-group">
-            <strong>Contraseña:</strong>
-            {{ $user->password }}
         </div>
     </div>
 </div>

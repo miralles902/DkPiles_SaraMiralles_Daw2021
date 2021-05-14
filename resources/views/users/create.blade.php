@@ -1,4 +1,6 @@
-@extends('users.layout')
+@extends('adminlte::page')
+
+@section('title', 'Registrar Usuario')
   
 @section('content')
 <div class="row">

@@ -1,4 +1,6 @@
-@extends('configs.layout')
+@extends('adminlte::page')
+
+@section('title', 'crea')
 
 @section('content')
 <body>
@@ -42,3 +44,4 @@
     </div>
 </body>
 </html>
+@endsection
