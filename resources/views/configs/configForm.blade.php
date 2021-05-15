@@ -12,12 +12,6 @@
                 <h6 class="text-white">Configura las páginas que quieres mostrar</h6>
             </div>
             <div class="card-body">
-                <div class="row">
-                    <!--<div class="col-md-12 text-right mb-12">
-                                <a class="btn btn-primary" href="{{ url('/home') }}">Volver al panel</a>
-                                <a href="{{ route('configs.create') }}" class="btn btn-success">Create</a>
-                            </div>  -->
-                </div>
                 <br>
                 <table class="table table-bordered">
                     <tr>

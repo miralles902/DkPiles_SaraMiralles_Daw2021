@@ -21,19 +21,17 @@
                                 <a href="{{ route('configs.index') }}" class="btn btn-primary">Back</a>
                             </div>
                         </div>
-                        <form action="" method="POST">
+                        <form method="post" action="{{ route('configs.update',$config->id) }}">
                             @csrf
+                            @method('PUT')
 
                             <div class="form-group">
-                            <label><strong>Category :</strong></label><br>
-                           
-                           
-                                <label><input type="checkbox" name="category[]" value="contacto"> Contacto</label>
-                                <label><input type="checkbox" name="category[]" value="tiempo"> El Tiempo</label>
-                                <label><input type="checkbox" name="category[]" value="galeria"> Galeria</label>
-                                <label><input type="checkbox" name="category[]" value="mercadillo"> Mercadillo</label>
-                                <label><input type="checkbox" name="category[]" value="noticias"> Noticias</label>
-                                <label><input type="checkbox" name="category[]" value="webcams"> Webcams</label>
+                                <label><input type="checkbox" value="contacto" name="category[]"> Contacto</label>
+                                <label><input type="checkbox" value="tiempo" name="category[]" > El Tiempo</label>
+                                <label><input type="checkbox" value="galeria" name="category[]" > Galeria</label>
+                                <label><input type="checkbox" value="mercadillo" name="category[]" > Mercadillo</label>
+                                <label><input type="checkbox" value="noticias" name="category[]"> Noticias</label>
+                                <label><input type="checkbox" value="webcams" name="category[]"> Webcams</label>
                             </div>
 
                             <div class="form-group text-center">

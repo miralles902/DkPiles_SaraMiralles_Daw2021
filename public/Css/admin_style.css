@@ -1,18 +1,7 @@
-body{
-    background: url(../img/playa.jpg) no-repeat center center fixed; 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}
-
-.card{
-    background-color: azure;
-}
-
-.navbar-light .navbar-brand {
-    color: rgb(255 255 255 / 80%) !important;
-}
-.navbar-brand {   
-    padding-bottom: 1.25rem !important;
+body {
+    background: url(../img/playa.jpg) no-repeat center center fixed !important; 
+    -webkit-background-size: cover !important;
+    -moz-background-size: cover !important;
+    -o-background-size: cover !important;
+    background-size: cover !important;
 }
