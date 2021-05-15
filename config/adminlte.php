@@ -242,11 +242,6 @@ return [
         ],
         ['header' => 'Ajustes de la cuenta'],
         [
-            'text' => 'Perfil',
-            'url'  => '/users/$id/show',
-            'icon' => 'fas fa-fw fa-user',
-        ],
-        [
             'text' => 'Cambiar datos',
             'url'  => '/users/$id/edit',
             'icon' => 'fas fa-fw fa-lock',

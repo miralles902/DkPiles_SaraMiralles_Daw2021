@@ -22,7 +22,6 @@ class VentaController extends Controller
     public function mercadillo()
     {
         $ventasMercadillo =Venta::latest()->simplePaginate(5);
-    //print_r($ventasMercadillo);
 
         return view('Market',compact('ventasMercadillo'))
             ->with('i', (request()->input('page', 1) - 1) * 5);

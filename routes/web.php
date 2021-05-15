@@ -6,7 +6,6 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\VentaController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ConfigController;
-use App\Http\Controllers\FormController;
 use Illuminate\Support\Facades\Auth;
 /*
 |--------------------------------------------------------------------------
@@ -105,7 +104,7 @@ Route::group(['middleware' => 'admin'], function () {
 
     /* ruta a la página de configuración */
     Route::resource('configs', ConfigController::class);
-
+    
 });
 
 /* ================ rutas para editores ================ */
