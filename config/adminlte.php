@@ -69,7 +69,7 @@ return [
     'usermenu_header_class' => 'bg-info',
     'usermenu_image' => true,
     'usermenu_desc' => false,
-    'usermenu_profile_url' => false,
+    'usermenu_profile_url' => true,
 
     /*
     |--------------------------------------------------------------------------
@@ -239,12 +239,6 @@ return [
             'text' => 'Administracion',
             'url'  => '/home',
             'icon' => 'fas fa-user-shield',
-        ],
-        ['header' => 'Ajustes de la cuenta'],
-        [
-            'text' => 'Cambiar datos',
-            'url'  => '/users/$id/edit',
-            'icon' => 'fas fa-fw fa-lock',
         ],
         ['header' => 'Secciones'],
         [

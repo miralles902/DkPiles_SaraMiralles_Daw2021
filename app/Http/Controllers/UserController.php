@@ -16,7 +16,7 @@ class UserController extends Controller
      */
     public function index()
     {
-        
+
         $users = User::latest()->simplePaginate(5);
 
         return view('users.index', compact('users', 'users'))
@@ -106,7 +106,7 @@ class UserController extends Controller
 
         $users->update();
 
-        return redirect('/users')->with('success', 'Usuario actualizado correctamente.');
+        return redirect('/users')->with('success', 'Usuario editado correctamente.');
     }
 
     /**

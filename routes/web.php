@@ -6,6 +6,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\VentaController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ConfigController;
+use App\Http\Controllers\ChangeController;
 use Illuminate\Support\Facades\Auth;
 /*
 |--------------------------------------------------------------------------
@@ -84,6 +85,8 @@ Route::get('/val/webcams', function () {
     return view('/Val/webcams');
 });
 
+
+
 /* ================  ruta para ckeditor  ================ */
 Route::post('ckeditor/upload', 'CKEditorController@upload')->name('ckeditor.image-upload');
 
@@ -106,6 +109,9 @@ Route::group(['middleware' => 'admin'], function () {
     Route::resource('configs', ConfigController::class);
     
 });
+/* Cambio de contraseña */
+Route::resource('userConf', ChangeController::class)->middleware('auth');
+Route::get('/editUser/{user}', [ChangeController::class, 'editUser'])->name('editUser')->middleware('auth');
 
 /* ================ rutas para editores ================ */
 

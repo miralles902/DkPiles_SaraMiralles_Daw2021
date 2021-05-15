@@ -9,7 +9,7 @@
             <h2>Editar datos de {{ $user->name }} {{ $user->surname }}</h2>
         </div>
         <div class="pull-right">
-            <a class="btn btn-primary" href="{{ url('users') }}">Atrás</a>
+            <a class="btn btn-primary" href="{{ url('/home') }}">Atrás</a>
         </div>
     </div>
 </div>
@@ -25,7 +25,7 @@
 </div>
 @endif
 
-<form action="{{ route('users.update',$user->id) }}" method="POST">
+<form action="{{ route('userConf.update',$user->id) }}" method="POST">
     @csrf
     @method('PUT')
 
@@ -43,15 +43,7 @@
             </div>
         </div>
  
-        <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
-                <strong>Tipo de usuario:</strong>
-                <select class="form-control" name="tipo_usuario">
-                    <option value="1"{{ $user->tipo_usuario == 1 ? 'selected' : ''}}>Administrador</option>
-                    <option value="0"{{ $user->tipo_usuario == 0 ? 'selected' : '' }}>Editor</option>
-                </select>
-            </div>
-        </div>
+                <input type="hidden" name="tipo_usuario" class="form-control" value="{{ $user->tipo_usuario }}" readonly>
 
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
