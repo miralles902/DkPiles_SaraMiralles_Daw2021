@@ -253,7 +253,7 @@ return [
         ],
         [
             'text' => 'Noticias',
-            'url'  => 'admin/settings',
+            'url'  => '/noticias',
             'icon' => 'far fa-newspaper',
         ],
         

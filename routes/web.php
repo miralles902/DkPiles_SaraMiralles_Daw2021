@@ -7,6 +7,7 @@ use App\Http\Controllers\VentaController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ConfigController;
 use App\Http\Controllers\ChangeController;
+use App\Http\Controllers\NoticiaController;
 use Illuminate\Support\Facades\Auth;
 /*
 |--------------------------------------------------------------------------
@@ -45,6 +46,10 @@ Route::get('/tiempo', function () {
 Route::get('/mercadillo', [VentaController::class, 'mercadillo']);
 Route::get('/mercadilloShow/{ventasMercadillo}', [VentaController::class, 'mercadilloShow'])->name('mercadilloShow');
 
+
+/* rutas para frontend noticias */
+Route::get('/noticias', [NoticiaController::class, 'noticia']);
+Route::get('/noticiaShow/{noticiasUsuarios}', [NoticiaController::class, 'noticiaShow'])->name('noticiaShow');
 
 Route::get('/noticias', function () {
     return view('news');
@@ -121,5 +126,8 @@ Route::resource('ventas', VentaController::class)->middleware('auth');
 Se agrega ->middleware('auth'); para restringir el acceso solo a usuarios registrados,
 en este caso editores.
 */
-
+/* rutas para los mensajes de contacto */
 Route::resource('contacts', ContactController::class)->middleware('auth');
+
+/* ruta para las noticias */
+Route::resource('noticias', NoticiaController::class)->middleware('auth');
