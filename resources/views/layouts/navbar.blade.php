@@ -100,7 +100,7 @@
             <a class="btn btn-primary" href="{{ url('/tiempo') }}" id="tiempo">El tiempo</a>
             <a class="btn btn-primary" href="{{ url('/galeria') }}" id="galeria">Galeria</a>
             <a class="btn btn-primary" href="{{ url('/mercadillo') }}" id="mercadillo">Mercadillo</a>
-            <a class="btn btn-primary" href="{{ url('/noticias') }}" id="noticias">Noticias</a>
+            <a class="btn btn-primary" href="{{ url('/news') }}" id="noticias">Noticias</a>
             <a class="btn btn-primary" href="{{ url('/webcams') }}" id="webcams">Webcams</a>
         </nav>
         <!-- end menu -->

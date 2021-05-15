@@ -48,7 +48,7 @@ Route::get('/mercadilloShow/{ventasMercadillo}', [VentaController::class, 'merca
 
 
 /* rutas para frontend noticias */
-Route::get('/noticias', [NoticiaController::class, 'noticia']);
+Route::get('/news', [NoticiaController::class, 'noticia']);
 Route::get('/noticiaShow/{noticiasUsuarios}', [NoticiaController::class, 'noticiaShow'])->name('noticiaShow');
 
 Route::get('/noticias', function () {

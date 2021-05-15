@@ -11,12 +11,11 @@
             
             <td><img src="/image/{{ $noticia->image }}" width="100px"></td>
             <td>{{ $noticia->titulo }}</td>
-            <td>{{ $noticia->precio }} €</td>
             <td><div class="module line-clamp">{!! $noticia->detail !!}</div></td>
             <td>
                
      
-            <a class="btn btn-info" href="{{ route('mercadilloShow',$noticia->id) }}">Leer Más</a>
+            <a class="btn btn-info" href="{{ route('noticiaShow',$noticia->id) }}">Leer Más</a>
       
             </td>
         </tr>

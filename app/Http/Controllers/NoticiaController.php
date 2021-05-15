@@ -24,7 +24,7 @@ class NoticiaController extends Controller
     {
         $noticiasUsuarios =Noticia::latest()->simplePaginate(5);
     
-        return view('noticias.index',compact('noticias'))
+        return view('news',compact('noticiasUsuarios'))
             ->with('i', (request()->input('page', 1) - 1) * 5);
     }
 
