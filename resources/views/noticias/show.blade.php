@@ -9,7 +9,7 @@
                 <h2> Ver Noticia</h2>
             </div>
             <div class="pull-right">
-                <a class="btn btn-primary" href="{{ route('noticias.index') }}"> Back</a>
+                <a class="btn btn-primary" href="{{ route('noticias.index') }}"> Volver al panel</a>
             </div>
         </div>
     </div>
@@ -30,11 +30,11 @@
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Imagen:</strong>
-                <img src="/image/{{ $noticia->image }}" width="500px">
+                <img src="/image/{{ $noticia->image }}"  class="img-fluid">
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
+            <div class="form-group img_resize">
                 <strong>Detalles:</strong>
                 {!! $noticia->detail !!}
             </div>

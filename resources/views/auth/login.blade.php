@@ -71,3 +71,22 @@
     </div>
 </div>
 @endsection
+
+@section('css')
+<style type="text/css">
+.login-page {
+background: url("img/playa.jpg") no-repeat center center fixed;
+background-size: cover;	
+}
+img {
+
+    width: 107px;
+    height: 105px;
+}
+
+.login-logo a, .register-logo a {
+    color: #f5f5f5;
+    font-size: 53px;
+}
+</style>
+@stop
