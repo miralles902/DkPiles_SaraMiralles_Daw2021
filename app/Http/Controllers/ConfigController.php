@@ -18,39 +18,10 @@ class ConfigController extends Controller
         return view('configs.configForm',compact('configs'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        return view('configs.formMultipleCheckbox');
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //$input = $request->all();
-        $input['category'] = $request->input('category');
-        Config::create($input);
-        return redirect()->route('configs.index');
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function edit($id)
     {
         $config = Config::find($id);
+        $allCategories = ['contacto', 'tiempo', 'galeria', 'mercadillo', 'noticias', 'webcams'];
         return view('configs.config',compact('config','id'));
     }
 

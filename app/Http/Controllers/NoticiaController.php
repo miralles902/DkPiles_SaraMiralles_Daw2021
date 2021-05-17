@@ -82,7 +82,7 @@ class NoticiaController extends Controller
 
     public function noticiaShow(Noticia $noticiasUsuarios)
     {
-        return view('noticiaShow',compact('noticiasUsuarios'));
+        return view('newsShow',compact('noticiasUsuarios'));
     }
 
     /**
