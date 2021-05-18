@@ -20,6 +20,8 @@
     <link rel="stylesheet" href="{{ URL::asset('css/style_index.css') }}">
     <link rel="stylesheet" href="{{ URL::asset('css/textStyle.css') }}">
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+
 
     <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
@@ -44,49 +46,51 @@
 
 <body>
     <header>
-        <h1>@yield('title')</h1>
+        <div class="container">
+            <div class="row">
+                <!-- boton modo oscuro -->
+                <button class="switch" id="switch">
+                    <span><i class="fas fa-sun"></i></span>
+                    <span><i class="fas fa-moon"></i></span>
+                </button>
+                <!-- end boton modo oscuro -->
 
-        <!-- boton modo oscuro -->
-        <button class="switch" id="switch">
-            <span><i class="fas fa-sun"></i></span>
-            <span><i class="fas fa-moon"></i></span>
-        </button>
-        <!-- end boton modo oscuro -->
+                <!-- boton Whatsapp -->
+                <a title="whatsapp" href="https://wa.me/+34622861169/?text=Me%20gustaría%20ponerme%20en%20contacto%20con%20vosotros" target="_blank" id="enlaceWhatsapp"><i class="fab fa-whatsapp"></i></a>
+                <!-- end boton Whatsapp -->
 
-        <!-- boton Whatsapp -->
-        <a title="whatsapp" href="https://wa.me/+34622861169/?text=Me%20gustaría%20ponerme%20en%20contacto%20con%20vosotros" target="_blank" id="enlaceWhatsapp"><i class="fab fa-whatsapp"></i></a>
-        <!-- end boton Whatsapp -->
+                <!-- boton Login -->
+                @guest
+                <!-- si no esta logueado se muestra una llave a la página de login-->
+                <a title="login" href="{{ url('/login') }}" target="_self" id="enlaceLogin"><i class="fas fa-key"></i></a>
+                @else
+                <!-- si esta logueado se muestra el nombre o salir de sesion-->
+                @if(Auth::user()->tipo_usuario)
+                <a href="{{ url('/homeAdmin') }}" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                    {{ Auth::user()->name }}
+                </a>
+                @else
+                <a href="{{ url('/home') }}" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                    {{ Auth::user()->name }}
+                </a>
+                @endif
 
-        <!-- boton Login -->
-        @guest
-        <!-- si no esta logueado se muestra una llave a la página de login-->
-        <a title="login" href="{{ url('/login') }}" target="_self" id="enlaceLogin"><i class="fas fa-key"></i></a>
-        @else
-        <!-- si esta logueado se muestra el nombre o salir de sesion-->
-        @if(Auth::user()->tipo_usuario)
-        <a id="navbarDropdown" class="nav-link dropdown-toggle" href="{{ url('/homeAdmin') }}" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-            {{ Auth::user()->name }}
-        </a>
-        @else
-        <a id="navbarDropdown" class="nav-link dropdown-toggle" href="{{ url('/home') }}" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-            {{ Auth::user()->name }}
-        </a>
-        @endif
-
-        <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
+                <a href="{{ route('logout') }}" onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-            {{ __('Salir') }}
-        </a>
+                    {{ __('Salir') }}
+                </a>
 
-        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-            @csrf
-        </form>
-        @endguest
-        <!-- end boton Login -->
+                <form id="logout-form" action="{{ route('logout') }}" method="POST">
+                    @csrf
+                </form>
+                @endguest
+                <!-- end boton Login -->
 
-        <!-- idioma -->
-        <a title="valencia" href="{{ url('/val') }}">Val</a>
-        <!-- end idioma -->
+                <!-- idioma -->
+                <a title="valencia" href="{{ url('/val') }}">Val</a>
+                <!-- end idioma -->
+            </div>
+        </div>
     </header>
     <main>
         @yield('content_page')
@@ -96,12 +100,12 @@
         <!-- Menu -->
         <nav>
             <a href="{{ url('/') }}">Página principal</a>
-            <a class="btn btn-primary" href="{{ url('/contacto') }}" id="contacto">Contacto</a>
-            <a class="btn btn-primary" href="{{ url('/tiempo') }}" id="tiempo">El tiempo</a>
-            <a class="btn btn-primary" href="{{ url('/galeria') }}" id="galeria">Galeria</a>
-            <a class="btn btn-primary" href="{{ url('/mercadillo') }}" id="mercadillo">Mercadillo</a>
-            <a class="btn btn-primary" href="{{ url('/news') }}" id="noticias">Noticias</a>
-            <a class="btn btn-primary" href="{{ url('/webcams') }}" id="webcams">Webcams</a>
+            <a href="{{ url('/contacto') }}" id="contacto">Contacto</a>
+            <a href="{{ url('/tiempo') }}" id="tiempo">El tiempo</a>
+            <a href="{{ url('/galeria') }}" id="galeria">Galeria</a>
+            <a href="{{ url('/mercadillo') }}" id="mercadillo">Mercadillo</a>
+            <a href="{{ url('/news') }}" id="noticias">Noticias</a>
+            <a href="{{ url('/webcams') }}" id="webcams">Webcams</a>
         </nav>
         <!-- end menu -->
     </footer>
