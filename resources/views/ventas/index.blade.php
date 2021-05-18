@@ -28,7 +28,7 @@
             <p>{{ $message }}</p>
         </div>
         @endif
-        <table class="table table-responsive-sm table-striped">
+        <table class="table  table-responsive table-striped">
             <thead class="thead-dark">
                 <tr>
                     <th scope="col">No</th>
@@ -53,7 +53,7 @@
                     <td>{{ $venta->nombre_vendedor }}</td>
                     <td>{{ $venta->contacto_vendedor }}</td>
                     <td>
-                        <div class="module line-clamp">{!! getShortedString($venta->detail, 3000) !!}</div>
+                        <div class="module line-clamp">{!! $venta->detail !!}</div>
                     </td>
                     <td class="text-nowrap">
                         <form action="{{ route('ventas.destroy',$venta->id) }}" method="POST">

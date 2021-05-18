@@ -29,7 +29,7 @@
         </div>
         @endif
 
-        <table class="table table-responsive-sm table-striped">
+        <table class="table table-responsive table-responsive-sm table-striped">
             <thead class="thead-dark">
                 <tr>
                     <th scope="col">No</th>
