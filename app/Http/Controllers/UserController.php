@@ -44,8 +44,8 @@ class UserController extends Controller
         $request->validate([
             'name' => 'required',
             'surname' => 'required',
-            'email' => 'required',
-            'password' => 'required',
+            'email' => 'required | email | unique:users',
+            'password' => 'required | min:8',
         ]);
 
         $user = new User([
@@ -93,8 +93,8 @@ class UserController extends Controller
         $request->validate([
             'name' => 'required',
             'surname' => 'required',
-            'email' => 'required',
-            'password' => 'required',
+            'email' => 'required | email',
+            'password' => 'required | min:8',
         ]);
 
         $users = User::find($id);

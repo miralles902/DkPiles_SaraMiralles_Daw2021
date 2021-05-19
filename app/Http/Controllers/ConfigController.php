@@ -21,8 +21,7 @@ class ConfigController extends Controller
     public function edit($id)
     {
         $config = Config::find($id);
-        $allCategories = ['contacto', 'tiempo', 'galeria', 'mercadillo', 'noticias', 'webcams'];
-        return view('configs.config',compact('config','id'));
+        return view('configs.config',compact('config'));
     }
 
     /**

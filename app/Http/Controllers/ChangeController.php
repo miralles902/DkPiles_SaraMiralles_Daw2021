@@ -30,8 +30,8 @@ class ChangeController extends Controller
         $request->validate([
             'name' => 'required',
             'surname' => 'required',
-            'email' => 'required',
-            'password' => 'required',
+            'email' => 'required | email',
+            'password' => 'required | min:8',
         ]);
 
         $users = User::find($id);

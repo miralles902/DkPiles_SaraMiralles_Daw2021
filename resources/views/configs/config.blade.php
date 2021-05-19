@@ -25,7 +25,9 @@
                                     @csrf
                                     @method('PUT')
 
-                                    <div class="form-group">
+                                    <div class="form-group text-center">
+
+                                        <input type="checkbox" onClick="toggle(this)" /> Seleccionar/Deseleccionar todos<br><br>
                                         <label><input type="checkbox" value="contacto" name="category[]"> Contacto</label>
                                         <label><input type="checkbox" value="tiempo" name="category[]"> El Tiempo</label>
                                         <label><input type="checkbox" value="galeria" name="category[]"> Galeria</label>
@@ -34,6 +36,7 @@
                                         <label><input type="checkbox" value="webcams" name="category[]"> Webcams</label>
                                     </div>
                             </div>
+
                         </div>
                         <div class="form-group text-center">
                             <button type="submit" class="btn btn-success btn-sm">Guardar</button>
@@ -49,3 +52,16 @@
 </html>
 <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
 @endsection
+
+@section('js')
+<script>
+    function toggle(source) {
+        checkboxes = document.getElementsByName('category[]');
+
+        for (var i = 0, n = checkboxes.length; i < n; i++) {
+            checkboxes[i].checked = source.checked;
+        }
+
+    }
+</script>
+@stop
