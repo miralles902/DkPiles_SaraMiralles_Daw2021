@@ -40,7 +40,7 @@
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Precio:</strong>
-                {{ $venta->precio }}
+                {{ $venta->precio }} €
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">

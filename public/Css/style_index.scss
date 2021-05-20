@@ -10,98 +10,155 @@ $totalmenteNegro: #000000;
 $blancoSwitch: #f1f1f1;
 $whatsapp: #92d36e;
 // ==================================================================
+//                                Tamaños
+$iconos: 28px;
 
+// ==================================================================
+//                         fuentes de texto
+//                             allerta
+@import url("https://fonts.googleapis.com/css2?family=Allerta&display=swap");
+
+// ==================================================================
 /* Colores del cuerpo */
 body {
     background: $blancoRoto;
     transition: 0.3s ease all;
-    background: url(../img/fondoClaro.png) no-repeat;
+    margin: auto !important;
     width: 90%;
     height: 100%;
-
+    overflow-x: hidden;
     &.dark {
         /* modo oscuro */
         background-color: $dark;
         //background: url(../img/fondoOscuro.png) no-repeat;
         width: 90%;
         height: 100%;
+        p,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: $blancoRoto;
+        }
     }
     .fa-whatsapp {
         color: $whatsapp;
-        font-size: 30px;
+        font-size: $iconos;
     }
     .fa-key {
         color: $blancoSwitch;
-        font-size: 30px;
+        font-size: 16px;
     }
-}
-
-/* Titulo H1 de la página*/
-h1 {
-    body.dark & {
-        /* modo oscuro */
-        color: $blancoRoto;
-    }
-}
-/*enlaces*/
-nav {
-    transition: 0.3s ease all;
-    a {
-        color: $dark;
-        text-decoration: none;
-    }
-    body.dark & {
-        a {
-            /* modo oscuro */
-            color: $blancoRoto;
-            &:hover {
-                color: $blancoRoto;
+    header {
+        .container {
+            z-index: 999;
+            padding-left: unset;
+            padding-right: unset;
+            position: fixed;
+            top: 0;
+            left: 0;
+            svg {
+                width: 100%;
+            }
+            #logo {
+                width: 30%;
+                position: fixed;
+                padding-left: 3%;
+                padding-top: 2%;
+            }
+            .row {
+                padding-left: 123px;
+                padding-top: 3%;
+                .botonesHead {
+                    padding-left: 10px;
+                    a {
+                        font-family: "Allerta", sans-serif;
+                        color: $blancoRoto;
+                        text-decoration: none;
+                        text-transform: capitalize;
+                    }
+                }
             }
         }
     }
-}
+    main {
+        margin: 9rem 0;
 
-/* estilos de boton Claro / Oscuro */
-.switch {
-    background: $azulOscuro;
-    border-radius: 1000px;
-    border: none;
-    position: relative;
-    cursor: pointer;
-    display: flex;
-    outline: none;
-    &::after {
-        content: "";
-        display: block;
-        width: 30px;
-        height: 30px;
-        position: absolute;
-        background: $blancoSwitch;
-        top: 0;
-        left: 0; /* Para cuando cambiemos la posición del boton*/
-        right: unset; /* Para cuando cambiemos la posición del boton*/
-        border-radius: 100px;
-        transition: 0.3s ease all;
-        box-shadow: 0px 0px 2px 2px $negroTransparente;
-    }
-    &.active {
-        background: $naranja;
-        color: $totalmenteNegro;
-        &::after {
-            right: 0;
-            left: unset;
+        p {
+            margin: 3rem;
+        }
+        /* Titulos de la página*/
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            text-align: center;
         }
     }
-    span {
-        width: 30px;
-        height: 30px;
-        line-height: 30px;
-        display: block;
-        background: none;
-        color: $totalmenteBlanco;
+    /*enlaces*/
+    nav {
+        transition: 0.3s ease all;
+        a {
+            color: $dark;
+            text-decoration: none;
+        }
+        body.dark & {
+            a {
+                /* modo oscuro */
+                color: $blancoRoto;
+                &:hover {
+                    color: $blancoRoto;
+                }
+            }
+        }
     }
-}
 
-.escondido {
-    display: none;
+    /* estilos de boton Claro / Oscuro */
+    .switch {
+        background: $azulOscuro;
+        border-radius: 1000px;
+        border: none;
+        position: relative;
+        cursor: pointer;
+        display: flex;
+        outline: none;
+        &::after {
+            content: "";
+            display: block;
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            background: $blancoSwitch;
+            top: 0;
+            left: 0; /* Para cuando cambiemos la posición del boton*/
+            right: unset; /* Para cuando cambiemos la posición del boton*/
+            border-radius: 100px;
+            transition: 0.3s ease all;
+            box-shadow: 0px 0px 2px 2px $negroTransparente;
+        }
+        &.active {
+            background: $naranja;
+            color: $totalmenteNegro;
+            &::after {
+                right: 0;
+                left: unset;
+            }
+        }
+        span {
+            width: 23px;
+            height: 29px;
+            line-height: 30px;
+            display: block;
+            background: none;
+            color: $totalmenteBlanco;
+        }
+    }
+
+    .escondido {
+        display: none;
+    }
 }

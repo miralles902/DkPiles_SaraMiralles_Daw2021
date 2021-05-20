@@ -14,10 +14,10 @@ class ContactController extends Controller
      */
     public function index()
     {
-        $contacts = Contact::latest()->simplePaginate(6);
+        $contacts = Contact::latest()->simplePaginate(5);
   
         return view('contacts.index',compact('contacts'))
-            ->with('i', (request()->input('page', 1) - 1) * 6);
+            ->with('i', (request()->input('page', 1) - 1) * 5);
     }
 
     /**

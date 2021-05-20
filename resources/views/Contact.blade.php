@@ -30,7 +30,7 @@
 <!-- mapa -->
 <section id="mapa">
     <h3>¡Estamos aquí!</h3>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6205.668974969022!2d-0.1204852!3d38.9506094!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd61e77b92a80ab1%3A0x28c90396840f0a8e!2sDKPiles!5e0!3m2!1ses!2ses!4v1613740698069!5m2!1ses!2ses" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6205.668974969022!2d-0.1204852!3d38.9506094!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd61e77b92a80ab1%3A0x28c90396840f0a8e!2sDKPiles!5e0!3m2!1ses!2ses!4v1613740698069!5m2!1ses!2ses" width="100%" height="auto" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
 </section>
 <!-- sobre el club -->
 <p>En nuestra zona de Piles, tras el considerable grupo de amantes y praticantes de kitesurf, y ante las dificultades presentadas por las prohibiciones y continuas quejas de los bañistas , decidimos formar el actual club D.K.P., con la iniciativa de legalizar una zona</p>

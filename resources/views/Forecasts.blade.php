@@ -1,7 +1,6 @@
 @extends('layouts.navbar')
 @section('title', 'Más previsiones')
 @section('content_page')
-<h1>Piles</h1>
 <a class="weatherwidget-io" href="https://forecast7.com/es/38d94n0d13/piles/" data-label_1="PILES" data-label_2="EL TIEMPO" data-theme="original">PILES EL TIEMPO</a>
 <script>
     ! function(d, s, id) {
@@ -14,8 +13,8 @@
         }
     }(document, 'script', 'weatherwidget-io-js');
 </script>
-<iframe width="650" height="450" src="https://embed.windy.com/embed2.html?lat=38.456&lon=-0.128&detailLat=38.456&detailLon=-0.128&width=650&height=450&zoom=8&level=surface&overlay=wind&product=ecmwf&menu=&message=&marker=&calendar=now&pressure=&type=map&location=coordinates&detail=&metricWind=default&metricTemp=default&radarRange=-1" frameborder="0"></iframe>
-<iframe src="https://wisuki.com/widget-summary?spot=2679&spotid=2434&lang=es" style="border: 0; width: 300; height: 270;" frameborder="0"></iframe>
+<iframe width="100%" height="250px" src="https://embed.windy.com/embed2.html?lat=38.456&lon=-0.128&detailLat=38.456&detailLon=-0.128&width=650&height=450&zoom=8&level=surface&overlay=wind&product=ecmwf&menu=&message=&marker=&calendar=now&pressure=&type=map&location=coordinates&detail=&metricWind=default&metricTemp=default&radarRange=-1" frameborder="0"></iframe>
+<!--<iframe src="https://wisuki.com/widget-summary?spot=2679&spotid=2434&lang=es" style="border: 0; width: 300; height: 270;" frameborder="0"></iframe> -->
 
 <h1>Otros Spots</h1>
 <h1>Calpe</h1>

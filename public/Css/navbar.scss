@@ -1,0 +1,66 @@
+$negro: rgb(0, 0, 0);
+$negroTransparente: rgba(5, 5, 5, 0.945);
+$blanco: rgb(255, 255, 255);
+
+#wrap-items {
+    left: 0;
+    transition: all 1.5s ease;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    margin-bottom: 4rem;
+    display: flex;
+    flex-flow: column nowrap;
+    background-color: $negroTransparente;
+    text-transform: uppercase;
+    z-index: 999;
+
+    span.wrap-item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.5rem;
+        z-index: 999;
+
+        a {
+            width: 100%;
+            padding: 0.5em;
+            text-align: center;
+            letter-spacing: 1px;
+            color: $blanco;
+            text-shadow: 1px 0px 5px $negro;
+            border-bottom: 1px solid $negroTransparente;
+            text-decoration: none;
+            z-index: 999;
+
+            &:hover {
+                background-color: $negro;
+                z-index: 999;
+            }
+
+            &:active {
+                background-color: $negro;
+                z-index: 999;
+            }
+        }
+    }
+}
+
+.hamburger {
+    left: 0;
+    width: 100%;
+    height: 50px;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $negro;
+    z-index: 999;
+}
+.menu-close {
+    display: none !important;
+}
+.menu-open {
+    display: block;
+}
