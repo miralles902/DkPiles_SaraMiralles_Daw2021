@@ -30,7 +30,6 @@ body {
     &.dark {
         /* modo oscuro */
         background-color: $dark;
-        //background: url(../img/fondoOscuro.png) no-repeat;
         width: 90%;
         height: 100%;
         p,
@@ -44,29 +43,36 @@ body {
         }
     }
     .fa-whatsapp {
+        //icono whatsapp
         color: $whatsapp;
         font-size: $iconos;
     }
     .fa-key {
+        //icono login
         color: $blancoSwitch;
         font-size: 16px;
     }
     header {
-        .container {
+        svg {
+            position: fixed;
+            top: 0;
+            right: 0;
+            left: 0;
+            z-index: 998;
+            width: 100%;
+        }
+        .navbarLogo {
             z-index: 999;
             padding-left: unset;
             padding-right: unset;
             position: fixed;
             top: 0;
             left: 0;
-            svg {
-                width: 100%;
-            }
+
             #logo {
-                width: 30%;
+                width: 29%;
                 position: fixed;
-                padding-left: 3%;
-                padding-top: 2%;
+                padding-left: 2%;
             }
             .row {
                 padding-left: 123px;
@@ -160,5 +166,50 @@ body {
 
     .escondido {
         display: none;
+    }
+}
+
+// =================== Media Queries ========================== //
+//Tablet
+@media (min-width: 481px) {
+    body {
+        header {
+            svg {
+                height: 29%;
+            }
+            .navbarLogo {
+                #logo {
+                    width: 21%;
+                    position: fixed;
+                    padding-left: 12%;
+                }
+                .row {
+                    padding-left: 73%;
+                    padding-top: 1%;
+                }
+            }
+        }
+    }
+}
+
+//Web
+@media (min-width: 1025px) {
+    body {
+        header {
+            svg {
+                height: 90%;
+            }
+            .navbarLogo {
+                #logo {
+                    width: 23%;
+                    position: fixed;
+                    padding-left: 12%;
+                }
+                .row {
+                    padding-left: 81%;
+                    padding-top: 1%;
+                }
+            }
+        }
     }
 }

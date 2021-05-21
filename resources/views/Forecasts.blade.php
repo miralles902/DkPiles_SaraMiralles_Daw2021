@@ -96,7 +96,7 @@
 })(window, document);
 </script>
 <h1>Más recursos</h1>
-App Balearia
-<a href="https://apps.apple.com/es/app/balearia-port-meteo/id1086456215?l=es" title="appIOS" target="_blank">App IOS</a>
-<a href="https://apkpure.com/es/balearia-port-meteo/com.blaasoft.baleariaport" title="appIOS" target="_blank">App Android</a>
+<p><img src="{{ asset('img/balearia.png') }}" alt="meteo" id="meteo" />Descarga la app de Balearia Meteo</p>
+<a href="https://apps.apple.com/es/app/balearia-port-meteo/id1086456215?l=es" title="appIOS" target="_blank"><img src="{{ asset('img/ios.png') }}" alt="ios" id="ios" /></a>
+<a href="https://apkpure.com/es/balearia-port-meteo/com.blaasoft.baleariaport" title="appIOS" target="_blank"><img src="{{ asset('img/android.png') }}" alt="android" id="android" /></a>
 @endsection

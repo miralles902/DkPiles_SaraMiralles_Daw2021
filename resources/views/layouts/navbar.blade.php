@@ -48,17 +48,14 @@
 
 <body>
     <header>
-        <div class="container">
             <!-- Creating a SVG image -->
-            <svg>
-
+            <svg  viewBox="0 0 500 500" preserveAspectRatio="none">
                 <path d="M0, 100 C150, 200 350,
                 0 500, 100 L500, 00 L0, 0 Z" style="stroke:none; fill:black;">
                 </path>
             </svg>
-        </div>
-        <div class="container">
-            <a title="logo" href="{{ url('/') }}" target="_self"><img src="{{ asset('img/dkpilesBlanca.png') }}" alt="logo dkpiles" id="logo" /></a>
+        <div class="container navbarLogo">
+            <a title="logo" href="{{ url('/') }}" target="_self"><img src="svg/logo.svg" id="logo" alt="logo dkpiles"></a>
             <div class="row">
                 <div class="botonesHead">
                     <!-- boton modo oscuro -->

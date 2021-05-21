@@ -40,7 +40,16 @@ body .fa-key {
   font-size: 16px;
 }
 
-body header .container {
+body header svg {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 998;
+  width: 100%;
+}
+
+body header .navbarLogo {
   z-index: 999;
   padding-left: unset;
   padding-right: unset;
@@ -49,27 +58,22 @@ body header .container {
   left: 0;
 }
 
-body header .container svg {
-  width: 100%;
-}
-
-body header .container #logo {
-  width: 30%;
+body header .navbarLogo #logo {
+  width: 29%;
   position: fixed;
-  padding-left: 3%;
-  padding-top: 2%;
+  padding-left: 2%;
 }
 
-body header .container .row {
+body header .navbarLogo .row {
   padding-left: 123px;
   padding-top: 3%;
 }
 
-body header .container .row .botonesHead {
+body header .navbarLogo .row .botonesHead {
   padding-left: 10px;
 }
 
-body header .container .row .botonesHead a {
+body header .navbarLogo .row .botonesHead a {
   font-family: "Allerta", sans-serif;
   color: #f7ede5;
   text-decoration: none;
@@ -165,5 +169,35 @@ body .switch span {
 
 body .escondido {
   display: none;
+}
+
+@media (min-width: 481px) {
+  body header svg {
+    height: 29%;
+  }
+  body header .navbarLogo #logo {
+    width: 21%;
+    position: fixed;
+    padding-left: 12%;
+  }
+  body header .navbarLogo .row {
+    padding-left: 73%;
+    padding-top: 1%;
+  }
+}
+
+@media (min-width: 1025px) {
+  body header svg {
+    height: 90%;
+  }
+  body header .navbarLogo #logo {
+    width: 23%;
+    position: fixed;
+    padding-left: 12%;
+  }
+  body header .navbarLogo .row {
+    padding-left: 81%;
+    padding-top: 1%;
+  }
 }
 /*# sourceMappingURL=style_index.css.map */
