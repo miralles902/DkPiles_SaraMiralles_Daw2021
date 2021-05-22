@@ -48,6 +48,6 @@
 
 <!-- Vientos navegables-->
 <h1>Vientos navegables</h1>
-<img src="{{ asset('img/vents.jpg') }}" alt="vientos navegables" />
+<img class="img-fluid" src="{{ asset('img/vents.jpg') }}" alt="vientos navegables" />
 
 @endsection

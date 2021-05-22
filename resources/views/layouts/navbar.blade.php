@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" id="top">
 
 <head>
     <meta charset="utf-8">
@@ -43,13 +43,12 @@
         $category = $opciones->category;
     }
     ?>
-
 </head>
 
 <body>
     <header>
             <!-- Creating a SVG image -->
-            <svg  viewBox="0 0 500 500" preserveAspectRatio="none">
+            <svg  viewBox="0 0 500 170" preserveAspectRatio="none">
                 <path d="M0, 100 C150, 200 350,
                 0 500, 100 L500, 00 L0, 0 Z" style="stroke:none; fill:black;">
                 </path>
@@ -135,6 +134,7 @@
                     <span class="hamburger-inner"></span>
                 </span>
             </button>
+            <a href="#top" id="up"><i class="fas fa-arrow-up"></i></a>
             <!--NAVEGADOR LINKS-->
             <div id="wrap-items" class="menu-close">
                 <span class="wrap-item">

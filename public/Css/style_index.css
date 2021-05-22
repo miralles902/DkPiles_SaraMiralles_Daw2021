@@ -1,5 +1,11 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Allerta&display=swap");
+:root {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
 /* Colores del cuerpo */
 body {
   background: #f7ede5;
@@ -30,6 +36,14 @@ body.dark h6 {
   color: #f7ede5;
 }
 
+body.dark h4 {
+  color: #979797;
+}
+
+body.dark #hora {
+  color: #f7ede5;
+}
+
 body .fa-whatsapp {
   color: #92d36e;
   font-size: 28px;
@@ -45,7 +59,7 @@ body header svg {
   top: 0;
   right: 0;
   left: 0;
-  z-index: 998;
+  z-index: 996;
   width: 100%;
 }
 
@@ -98,23 +112,61 @@ body main h6 {
   text-align: center;
 }
 
+body main h4 {
+  background-color: #000000;
+  color: #f7ede5;
+}
+
+body main #wgs_widget_51_1403353076147 {
+  padding-left: 4%;
+}
+
+body main #wgs_widget_51_1403353076147 #wgs-curr #wgs-datetime {
+  color: #000000;
+}
+
+body main #windguruPiles {
+  z-index: 998;
+}
+
+body main .webcam #hora {
+  font-family: "Allerta", sans-serif;
+  color: #3a3838;
+  text-align: center;
+}
+
+body main .webcam #webcam-visor .imgcam {
+  width: 100%;
+}
+
+body footer #nav-mobile a {
+  text-decoration: none;
+}
+
+body.dark main #wgs_widget_51_1403353076147 #wgs-curr #wgs-datetime {
+  color: #979797;
+}
+
+body.dark main .webcam #hora {
+  color: #979797;
+}
+
 body nav {
   -webkit-transition: 0.3s ease all;
   transition: 0.3s ease all;
+  /*body.dark & {
+            a {
+                color: $blancoRoto;
+                &:hover {
+                    color: $blancoRoto;
+                }
+            }
+        }*/
 }
 
 body nav a {
   color: #3a3838;
   text-decoration: none;
-}
-
-body.dark body nav a {
-  /* modo oscuro */
-  color: #f7ede5;
-}
-
-body.dark body nav a:hover {
-  color: #f7ede5;
 }
 
 body .switch {
@@ -173,22 +225,25 @@ body .escondido {
 
 @media (min-width: 481px) {
   body header svg {
-    height: 29%;
+    height: 11%;
   }
   body header .navbarLogo #logo {
-    width: 21%;
+    width: 23%;
     position: fixed;
     padding-left: 12%;
   }
   body header .navbarLogo .row {
-    padding-left: 73%;
+    padding-left: 57%;
     padding-top: 1%;
+  }
+  body main #wgs_widget_51_1403353076147 {
+    padding-left: 20%;
   }
 }
 
 @media (min-width: 1025px) {
   body header svg {
-    height: 90%;
+    height: 29.5%;
   }
   body header .navbarLogo #logo {
     width: 23%;
@@ -198,6 +253,10 @@ body .escondido {
   body header .navbarLogo .row {
     padding-left: 81%;
     padding-top: 1%;
+  }
+  body main .webcam #webcam-visor .imgcam {
+    width: 100%;
+    height: 362px;
   }
 }
 /*# sourceMappingURL=style_index.css.map */

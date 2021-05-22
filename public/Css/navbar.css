@@ -5,7 +5,7 @@
   width: 100%;
   position: fixed;
   bottom: 0;
-  margin-bottom: 4rem;
+  margin-bottom: 3.2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -79,5 +79,26 @@
 
 .menu-open {
   display: block;
+}
+
+#up {
+  right: 0;
+  width: 10%;
+  height: 5%;
+  font-size: xx-large;
+  padding-right: 16%;
+  position: fixed;
+  bottom: 2%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  z-index: 999;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  color: black;
 }
 /*# sourceMappingURL=navbar.css.map */

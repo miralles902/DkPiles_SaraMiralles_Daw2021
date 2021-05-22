@@ -3,6 +3,7 @@
 $dark: #3a3838;
 $blancoRoto: #f7ede5;
 $totalmenteBlanco: #fff;
+$gris: #979797;
 $azulOscuro: #343d5b;
 $negroTransparente: rgba(0, 0, 0, 0.2);
 $naranja: #ffa500;
@@ -19,6 +20,11 @@ $iconos: 28px;
 @import url("https://fonts.googleapis.com/css2?family=Allerta&display=swap");
 
 // ==================================================================
+:root {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
 /* Colores del cuerpo */
 body {
     background: $blancoRoto;
@@ -41,6 +47,12 @@ body {
         h6 {
             color: $blancoRoto;
         }
+        h4 {
+            color: $gris;
+        }
+        #hora {
+            color: $blancoRoto;
+        }
     }
     .fa-whatsapp {
         //icono whatsapp
@@ -58,7 +70,7 @@ body {
             top: 0;
             right: 0;
             left: 0;
-            z-index: 998;
+            z-index: 996;
             width: 100%;
         }
         .navbarLogo {
@@ -104,23 +116,75 @@ body {
         h6 {
             text-align: center;
         }
+        h4 {
+            background-color: $totalmenteNegro;
+            color: $blancoRoto;
+        }
+        #wgs_widget_51_1403353076147 {
+            padding-left: 4%;
+            #wgs-curr{
+                #wgs-datetime{
+                    color: $totalmenteNegro;
+                }
+            }
+        }
+        #windguruPiles {
+            z-index: 998;
+        }
+        .webcam {
+            #hora {
+                font-family: "Allerta", sans-serif;
+                color: $dark;
+                text-align: center;
+            }
+            #webcam-visor {
+                .imgcam {
+                    width: 100%;
+                }
+            }
+        }
+    }
+    footer {
+        #nav-mobile {
+            a {
+                text-decoration: none;
+            }
+        }
+    }
+
+    //modo oscuro
+    &.dark {
+        main {
+            #wgs_widget_51_1403353076147 {
+                #wgs-curr{
+                    #wgs-datetime{
+                        color: $gris;
+                    }
+                }
+            }
+            .webcam {
+                #hora {
+                    color: $gris;
+                }
+            }
+        }
     }
     /*enlaces*/
+
     nav {
         transition: 0.3s ease all;
         a {
             color: $dark;
             text-decoration: none;
         }
-        body.dark & {
+        /*body.dark & {
             a {
-                /* modo oscuro */
                 color: $blancoRoto;
                 &:hover {
                     color: $blancoRoto;
                 }
             }
-        }
+        }*/
     }
 
     /* estilos de boton Claro / Oscuro */
@@ -175,18 +239,23 @@ body {
     body {
         header {
             svg {
-                height: 29%;
+                height: 11%;
             }
             .navbarLogo {
                 #logo {
-                    width: 21%;
+                    width: 23%;
                     position: fixed;
                     padding-left: 12%;
                 }
                 .row {
-                    padding-left: 73%;
+                    padding-left: 57%;
                     padding-top: 1%;
                 }
+            }
+        }
+        main{
+            #wgs_widget_51_1403353076147 {
+                padding-left: 20%;
             }
         }
     }
@@ -197,7 +266,7 @@ body {
     body {
         header {
             svg {
-                height: 90%;
+                height: 29.5%;
             }
             .navbarLogo {
                 #logo {
@@ -208,6 +277,16 @@ body {
                 .row {
                     padding-left: 81%;
                     padding-top: 1%;
+                }
+            }
+        }
+        main {
+            .webcam {
+                #webcam-visor {
+                    .imgcam {
+                        width: 100%;
+                        height: 362px;
+                    }
                 }
             }
         }
