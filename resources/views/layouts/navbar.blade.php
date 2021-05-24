@@ -25,6 +25,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
 
 
+
     <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
 
@@ -134,7 +135,7 @@
                     <span class="hamburger-inner"></span>
                 </span>
             </button>
-            <a href="#top" id="up"><i class="fas fa-arrow-up"></i></a>
+            <a href="#top" id="up" title="Arriba"><i class="fas fa-arrow-up"></i></a>
             <!--NAVEGADOR LINKS-->
             <div id="wrap-items" class="menu-close">
                 <span class="wrap-item">

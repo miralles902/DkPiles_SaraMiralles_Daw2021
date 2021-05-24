@@ -40,13 +40,15 @@ body {
         height: 100%;
         p,
         h1,
-        h2,
         h3,
-        h4,
         h5,
-        h6 {
+        h6,
+        label,
+        li {
             color: $blancoRoto;
+            font-family: "Allerta", sans-serif;
         }
+        h2,
         h4 {
             color: $gris;
         }
@@ -64,6 +66,9 @@ body {
         color: $blancoSwitch;
         font-size: 16px;
     }
+    .fa-check {
+        color: $whatsapp;
+    }
     header {
         svg {
             position: fixed;
@@ -80,6 +85,7 @@ body {
             position: fixed;
             top: 0;
             left: 0;
+            right: 0;
 
             #logo {
                 width: 29%;
@@ -106,6 +112,10 @@ body {
 
         p {
             margin: 3rem;
+            font-family: "Allerta", sans-serif;
+        }
+        li {
+            list-style-type: none;
         }
         /* Titulos de la página*/
         h1,
@@ -115,15 +125,16 @@ body {
         h5,
         h6 {
             text-align: center;
+            font-family: "Allerta", sans-serif;
         }
+        h2,
         h4 {
             background-color: $totalmenteNegro;
             color: $blancoRoto;
         }
         #wgs_widget_51_1403353076147 {
-            padding-left: 4%;
-            #wgs-curr{
-                #wgs-datetime{
+            #wgs-curr {
+                #wgs-datetime {
                     color: $totalmenteNegro;
                 }
             }
@@ -138,10 +149,24 @@ body {
                 text-align: center;
             }
             #webcam-visor {
+                padding-bottom: 47%;
                 .imgcam {
                     width: 100%;
                 }
             }
+        }
+        #surfImg {
+            display: none;
+        }
+        #meteo {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        #maps{
+            width:100%;
+             height:350px;
+             border:0; 
         }
     }
     footer {
@@ -156,8 +181,8 @@ body {
     &.dark {
         main {
             #wgs_widget_51_1403353076147 {
-                #wgs-curr{
-                    #wgs-datetime{
+                #wgs-curr {
+                    #wgs-datetime {
                         color: $gris;
                     }
                 }
@@ -253,9 +278,28 @@ body {
                 }
             }
         }
-        main{
+        main {
+            margin: 8rem 0;
             #wgs_widget_51_1403353076147 {
-                padding-left: 20%;
+                display: block;
+                margin-left: 0;
+                margin-right: 0;
+            }
+            .webcam {
+                #webcam-visor {
+                    padding-bottom: 58%;
+                }
+            }
+            #ios {
+                margin-right: 3%;
+            }
+            #viento{
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            #maps{
+                 height:450px;
             }
         }
     }
@@ -266,16 +310,16 @@ body {
     body {
         header {
             svg {
-                height: 29.5%;
+                height: 17%;
             }
             .navbarLogo {
                 #logo {
-                    width: 23%;
+                    width: 19%;
                     position: fixed;
-                    padding-left: 12%;
+                    left: 6%;
                 }
                 .row {
-                    padding-left: 81%;
+                    padding-left: 79%;
                     padding-top: 1%;
                 }
             }
@@ -283,11 +327,20 @@ body {
         main {
             .webcam {
                 #webcam-visor {
+                    padding-bottom: unset;
                     .imgcam {
                         width: 100%;
                         height: 362px;
                     }
                 }
+            }
+            #surfImg {
+                display: block;
+                width: 100%;
+                height: 100%;
+            }
+            #meteo {
+                padding-left: 50%;
             }
         }
     }

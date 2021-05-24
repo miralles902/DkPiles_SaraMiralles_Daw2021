@@ -28,14 +28,16 @@ body.dark {
 
 body.dark p,
 body.dark h1,
-body.dark h2,
 body.dark h3,
-body.dark h4,
 body.dark h5,
-body.dark h6 {
+body.dark h6,
+body.dark label,
+body.dark li {
   color: #f7ede5;
+  font-family: "Allerta", sans-serif;
 }
 
+body.dark h2,
 body.dark h4 {
   color: #979797;
 }
@@ -54,6 +56,10 @@ body .fa-key {
   font-size: 16px;
 }
 
+body .fa-check {
+  color: #92d36e;
+}
+
 body header svg {
   position: fixed;
   top: 0;
@@ -70,6 +76,7 @@ body header .navbarLogo {
   position: fixed;
   top: 0;
   left: 0;
+  right: 0;
 }
 
 body header .navbarLogo #logo {
@@ -101,6 +108,11 @@ body main {
 
 body main p {
   margin: 3rem;
+  font-family: "Allerta", sans-serif;
+}
+
+body main li {
+  list-style-type: none;
 }
 
 body main h1,
@@ -110,15 +122,13 @@ body main h4,
 body main h5,
 body main h6 {
   text-align: center;
+  font-family: "Allerta", sans-serif;
 }
 
+body main h2,
 body main h4 {
   background-color: #000000;
   color: #f7ede5;
-}
-
-body main #wgs_widget_51_1403353076147 {
-  padding-left: 4%;
 }
 
 body main #wgs_widget_51_1403353076147 #wgs-curr #wgs-datetime {
@@ -135,8 +145,28 @@ body main .webcam #hora {
   text-align: center;
 }
 
+body main .webcam #webcam-visor {
+  padding-bottom: 47%;
+}
+
 body main .webcam #webcam-visor .imgcam {
   width: 100%;
+}
+
+body main #surfImg {
+  display: none;
+}
+
+body main #meteo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body main #maps {
+  width: 100%;
+  height: 350px;
+  border: 0;
 }
 
 body footer #nav-mobile a {
@@ -236,27 +266,57 @@ body .escondido {
     padding-left: 57%;
     padding-top: 1%;
   }
+  body main {
+    margin: 8rem 0;
+  }
   body main #wgs_widget_51_1403353076147 {
-    padding-left: 20%;
+    display: block;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  body main .webcam #webcam-visor {
+    padding-bottom: 58%;
+  }
+  body main #ios {
+    margin-right: 3%;
+  }
+  body main #viento {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  body main #maps {
+    height: 450px;
   }
 }
 
 @media (min-width: 1025px) {
   body header svg {
-    height: 29.5%;
+    height: 17%;
   }
   body header .navbarLogo #logo {
-    width: 23%;
+    width: 19%;
     position: fixed;
-    padding-left: 12%;
+    left: 6%;
   }
   body header .navbarLogo .row {
-    padding-left: 81%;
+    padding-left: 79%;
     padding-top: 1%;
+  }
+  body main .webcam #webcam-visor {
+    padding-bottom: unset;
   }
   body main .webcam #webcam-visor .imgcam {
     width: 100%;
     height: 362px;
+  }
+  body main #surfImg {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  body main #meteo {
+    padding-left: 50%;
   }
 }
 /*# sourceMappingURL=style_index.css.map */
