@@ -39,7 +39,7 @@
                     <th scope="col">Nombre vendedor</th>
                     <th scope="col">Contacto vendedor</th>
                     <th scope="col">Detalles</th>
-                    <th scope="col">Action</th>
+                    <th scope="col">Acciones</th>
                 </tr>
             </thead>
             <tbody>
@@ -58,14 +58,14 @@
                     <td class="text-nowrap">
                         <form action="{{ route('ventas.destroy',$venta->id) }}" method="POST">
 
-                            <a class="btn btn-info" href="{{ route('ventas.show',$venta->id) }}"><i class="fas fa-eye"></i></a>
+                            <a class="btn btn-info" href="{{ route('ventas.show',$venta->id) }}" title="Ver"><i class="fas fa-eye"></i></a>
 
-                            <a class="btn btn-primary" href="{{ route('ventas.edit',$venta->id) }}"><i class="fas fa-pencil-alt"></i></a>
+                            <a class="btn btn-primary" href="{{ route('ventas.edit',$venta->id) }}" title="Editar"><i class="fas fa-pencil-alt"></i></a>
 
                             @csrf
                             @method('DELETE')
 
-                            <button type="submit" class="btn btn-danger"><i class="fas fa-trash-alt"></i></button>
+                            <button type="submit" class="btn btn-danger" title="Borrar"><i class="fas fa-trash-alt"></i></button>
                         </form>
                     </td>
                 </tr>

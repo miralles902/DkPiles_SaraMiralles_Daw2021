@@ -49,14 +49,14 @@
                 <td class="text-nowrap">
                     <form action="{{ route('users.destroy',$usuario->id) }}" method="POST">
 
-                        <a class="btn btn-info" href="{{ route('users.show',$usuario->id) }}" alt="ver"><i class="fas fa-eye"></i></a>
+                        <a class="btn btn-info" href="{{ route('users.show',$usuario->id) }}" alt="ver" title="Ver"><i class="fas fa-eye"></i></a>
 
-                        <a class="btn btn-primary" href="{{ route('users.edit',$usuario->id) }}" alt="editar"><i class="fas fa-user-edit"></i></a>
+                        <a class="btn btn-primary" href="{{ route('users.edit',$usuario->id) }}" alt="editar" title="Editar"><i class="fas fa-user-edit"></i></a>
 
                         @csrf
                         @method('DELETE')
 
-                        <button type="submit" class="btn btn-danger" alt="borrar"><i class="fas fa-trash-alt"></i></button>
+                        <button type="submit" class="btn btn-danger" alt="borrar" title="Borrar"><i class="fas fa-trash-alt"></i></button>
                     </form>
                 </td>
             </tr>

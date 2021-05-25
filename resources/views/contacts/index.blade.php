@@ -44,14 +44,14 @@
                     <td class="text-nowrap">
                         <form action="{{ route('contacts.destroy',$contacto->id) }}" method="POST">
 
-                            <a class="btn btn-info" href="{{ route('contacts.show',$contacto->id) }}"><i class="fas fa-eye"></i></a>
+                            <a class="btn btn-info" href="{{ route('contacts.show',$contacto->id) }}" title="Ver"><i class="fas fa-eye"></i></a>
 
-                            <a class="btn btn-primary" href="mailto:{{ $contacto->email }}"><i class="fas fa-paper-plane"></i></a>
+                            <a class="btn btn-primary" href="mailto:{{ $contacto->email }}" title="Responder"><i class="fas fa-paper-plane"></i></a>
 
                             @csrf
                             @method('DELETE')
 
-                            <button type="submit" class="btn btn-danger"><i class="fas fa-trash-alt"></i></button>
+                            <button type="submit" class="btn btn-danger" title="Borrar"><i class="fas fa-trash-alt"></i></button>
                         </form>
                     </td>
                 </tr>
