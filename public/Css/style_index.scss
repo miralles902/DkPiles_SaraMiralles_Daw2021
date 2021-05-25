@@ -133,6 +133,8 @@ body {
             color: $blancoRoto;
         }
         #wgs_widget_51_1403353076147 {
+            justify-content: center;
+            display: flex;
             #wgs-curr {
                 #wgs-datetime {
                     color: $totalmenteNegro;
@@ -163,10 +165,13 @@ body {
             margin-left: auto;
             margin-right: auto;
         }
-        #maps{
-            width:100%;
-             height:350px;
-             border:0; 
+        #maps {
+            width: 100%;
+            height: 350px;
+            border: 0;
+        }
+        #cal{
+            height:300px;
         }
     }
     footer {
@@ -280,11 +285,6 @@ body {
         }
         main {
             margin: 8rem 0;
-            #wgs_widget_51_1403353076147 {
-                display: block;
-                margin-left: 0;
-                margin-right: 0;
-            }
             .webcam {
                 #webcam-visor {
                     padding-bottom: 58%;
@@ -293,13 +293,16 @@ body {
             #ios {
                 margin-right: 3%;
             }
-            #viento{
+            #viento {
                 display: block;
                 margin-left: auto;
                 margin-right: auto;
             }
-            #maps{
-                 height:450px;
+            #maps {
+                height: 450px;
+            }
+            #cal{
+                height:450px;
             }
         }
     }
@@ -325,6 +328,7 @@ body {
             }
         }
         main {
+            margin: 9rem 0;
             .webcam {
                 #webcam-visor {
                     padding-bottom: unset;
@@ -341,6 +345,9 @@ body {
             }
             #meteo {
                 padding-left: 50%;
+            }
+            #cal{
+                height:100%;
             }
         }
     }

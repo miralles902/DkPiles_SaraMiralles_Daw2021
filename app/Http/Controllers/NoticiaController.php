@@ -22,10 +22,10 @@ class NoticiaController extends Controller
 
     public function noticia()
     {
-        $noticiasUsuarios =Noticia::latest()->simplePaginate(5);
+        $noticiasUsuarios =Noticia::latest()->simplePaginate(3);
     
         return view('news',compact('noticiasUsuarios'))
-            ->with('i', (request()->input('page', 1) - 1) * 5);
+            ->with('i', (request()->input('page', 1) - 1) * 3);
     }
 
     /**

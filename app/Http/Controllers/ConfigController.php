@@ -15,13 +15,13 @@ class ConfigController extends Controller
     public function index()
     {
         $configs = Config::all();
-        return view('configs.configForm',compact('configs'));
+        return view('configs.configForm', compact('configs'));
     }
 
     public function edit($id)
     {
         $config = Config::find($id);
-        return view('configs.config',compact('config'));
+        return view('configs.config', compact('config'));
     }
 
     /**
@@ -35,8 +35,14 @@ class ConfigController extends Controller
     {
         $configs = Config::find($id);
         $input['category'] = $request->input('category');
-        $configs->update($input);
-        
-        return redirect('/configs')->with('success', 'menu web actualizado correctamente.');
+        //no dejamos que se eliminen todos los campos del checkbox
+        if ($input['category'] != null) {
+            $configs->update($input);
+            //mensaje devuelto si se crea correctamente
+            return redirect('/configs')->with('success', 'menu web actualizado correctamente.');
+        } else {
+            //mensaje de error en la página principal indicando que no se pueden dejar campos vacios
+            return redirect('/configs')->with('message', 'No puede eliminar todas las categorias');
+        }
     }
 }

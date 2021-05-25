@@ -2,32 +2,26 @@
 @section('title', 'Noticias')
 @section('content_page')
 <div class="row">
-        <div class="col-lg-12 margin-tb">
-            <div class="pull-left">
-                <h2>{{ $noticiasUsuarios->titulo }} </h2>
-            </div>
+    <div class="col-lg-12 margin-tb">
+        <div class="pull-left text-capitalize">
+            <h2>{{ $noticiasUsuarios->titulo }} </h2>
         </div>
     </div>
-     
-    <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
-                <strong>Autor:</strong>
+</div>
+
+<div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+        <img src="/image/{{ $noticiasUsuarios->image }}" class="img-fluid">
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-12 text-justify">
+        {!! $noticiasUsuarios->detail !!}
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-12">
+        <div class="form-group text-center text-capitalize">
+            <h5><strong>Articulo escrito por: </strong>
                 {{ $noticiasUsuarios->autor }}
-            </div>
+            </h5>
         </div>
-        <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
-                <strong>Imagen:</strong>
-                <img src="/image/{{ $noticiasUsuarios->image }}" width="500px">
-            </div>
-        </div>
-        <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
-                <strong>Detalles:</strong>
-                {!! $noticiasUsuarios->detail !!}
-            </div>
-        </div>
-        
     </div>
+</div>
 @endsection
