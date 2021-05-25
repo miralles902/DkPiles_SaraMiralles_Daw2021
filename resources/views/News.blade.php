@@ -1,11 +1,15 @@
 @extends('layouts.navbar')
 @section('title', 'Noticias')
 @section('content_page')
-<section id="eventos">
-            <h3>Próximos eventos</h3>
+<div class="row">
+<div class="col-md-6">
+
+            <h4>Próximos eventos</h4>
             <iframe src="https://calendar.google.com/calendar/embed?height=400&amp;wkst=2&amp;bgcolor=%23ffffff&amp;ctz=Europe%2FMadrid&amp;src=c2IxbzQzODI2c3QzZWF1N2VycTRpaGZ1OGtAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;color=%23039BE5&amp;showTz=0&amp;showCalendars=0&amp;showTabs=0&amp;showTitle=0" style="border-width:0" width="450" height="400" frameborder="0" scrolling="no"></iframe>
-        </section>
-        <section id="noticias">
+
+        </div>
+        <div class="col-md-6">
+        <h4>Noticias</h4>
         @foreach ($noticiasUsuarios as $noticia)
         <tr>
             
@@ -21,5 +25,6 @@
         </tr>
         @endforeach
     </table>
-        </section>
+        </div>
+        </div>
 @endsection

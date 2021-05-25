@@ -55,7 +55,7 @@
                 </path>
             </svg>
         <div class="container navbarLogo">
-            <a title="logo" href="{{ url('/') }}" target="_self"><img src="svg/logo.svg" id="logo" alt="logo dkpiles"></a>
+            <a title="Dunes Kite Piles" href="{{ url('/') }}" target="_self"><img src="svg/logo.svg" id="logo" alt="logo dkpiles"></a>
             <div class="row">
                 <div class="botonesHead">
                     <!-- boton modo oscuro -->
