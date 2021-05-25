@@ -22,7 +22,7 @@
 			</div>
 			<div id="webcam-visor" style="position: relative;">
 				<!--AÑADO ESTA IMAGEN FAKE DE FONDO PARA EVITAR FLASHEO -->
-				<img class="img-fluid imgcam" style="position:absolute; z-index:OZ;" id="fondo" src="./gandia_nit2.jpg" alt="" />
+				<img class="img-fluid imgcam" style="position:absolute; z-index:OZ;" id="fondo" src="{{ asset('img/loading.gif') }}" alt="" />
 				<img class="img-fluid imgcam" style="position:absolute; z-index:127; display:none; " id="popimage0" src="http://turiscam.comunitatvalenciana.com/gandia.jpg?0.6469837288851448" alt="" />
 				<img class="img-fluid imgcam" style="position:absolute; z-index:131; display:none; " id="popimage1" src="http://turiscam.comunitatvalenciana.com/gandia.jpg?0.1481255725516435" alt="" />
 				<img class="img-fluid imgcam" style="position:absolute; z-index:132; display:none; " id="popimage2" src="http://turiscam.comunitatvalenciana.com/gandia.jpg?0.27504339971864056" alt="" />

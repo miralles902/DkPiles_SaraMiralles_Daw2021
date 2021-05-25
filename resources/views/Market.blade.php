@@ -12,7 +12,7 @@
         <div class="module line-clamp">{!! $venta->detail !!}</div>
     </div>
     <div class="col-md-2  text-center">
-        <strong>Precio: </strong>{{ $venta->precio }} €
+    <p><strong>Precio: </strong>{{ $venta->precio }} €</p>
     </div>
     <div class="col-md-4 text-center">
         <a class="btn btn-dark" href="{{ route('mercadilloShow',$venta->id) }}"><i class="fas fa-shopping-basket"></i> Detalles</a>

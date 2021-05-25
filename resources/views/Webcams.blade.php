@@ -15,31 +15,17 @@
   <div class="carousel-inner" role="listbox">
     <div class="carousel-item active">
       <div class="view">
-      <section class="webcam">
-                        <div id="hora">
-                            01-02-2021 11:57:30
-                        </div>
-                        <div id="webcam-visor">
-                          <img
-                            style="position:absolute; z-index:127; display:none; "
-                            id="popimage0"
-                            src="http://turiscam.comunitatvalenciana.com/gandia.jpg?0.6469837288851448"
-                            alt=""
-                          />
-                          <img
-                            style="position:absolute; z-index:131; display:none; "
-                            id="popimage1"
-                            src="http://turiscam.comunitatvalenciana.com/gandia.jpg?0.9859589556649855"
-                            alt=""
-                          />
-                          <img
-                            style="position:absolute; z-index:132; display:none; "
-                            id="popimage2"
-                            src="http://turiscam.comunitatvalenciana.com/gandia.jpg?0.27504339971864056"
-                            alt=""
-                          />
-                        </div>
-                      </section>
+        <section class="webcam">
+          <div id="hora">
+            01-02-2021 11:57:30
+          </div>
+          <div id="webcam-visor">
+            <img class="img-fluid imgcam" style="position:absolute; z-index:OZ;" id="fondo" src="{{ asset('img/loading.gif') }}" alt="" />
+            <img style="position:absolute; z-index:127; display:none; " id="popimage0" src="http://turiscam.comunitatvalenciana.com/gandia.jpg?0.6469837288851448" alt="" />
+            <img style="position:absolute; z-index:131; display:none; " id="popimage1" src="http://turiscam.comunitatvalenciana.com/gandia.jpg?0.9859589556649855" alt="" />
+            <img style="position:absolute; z-index:132; display:none; " id="popimage2" src="http://turiscam.comunitatvalenciana.com/gandia.jpg?0.27504339971864056" alt="" />
+          </div>
+        </section>
         <div class="mask rgba-black-light"></div>
       </div>
       <div class="carousel-caption">
@@ -50,13 +36,14 @@
     <div class="carousel-item">
       <!--Mask color-->
       <div class="view">
-      <section class="webcam">
-                <div id="webcam-visor">
-                    <img class="d-block w-100" style="position:absolute; z-index:127; display:none; " id="popimage0" src="http://turiscam.comunitatvalenciana.com/denia.jpg?0.6469837288851448" alt="" />
-                    <img class="d-block w-100" style="position:absolute; z-index:131; display:none; " id="popimage1" src="http://turiscam.comunitatvalenciana.com/denia.jpg?0.1481255725516435" alt="" />
-                    <img class="d-block w-100" style="position:absolute; z-index:132; display:none; " id="popimage2" src="http://turiscam.comunitatvalenciana.com/denia.jpg?0.27504339971864056" alt="" />
-                </div>
-            </section>
+        <section class="webcam">
+          <div id="webcam-visor">
+            <img class="img-fluid imgcam" style="position:absolute; z-index:OZ;" id="fondo" src="{{ asset('img/loading.gif') }}" alt="" />
+            <img class="d-block w-100" style="position:absolute; z-index:127; display:none; " id="popimage0" src="http://turiscam.comunitatvalenciana.com/denia.jpg?0.6469837288851448" alt="" />
+            <img class="d-block w-100" style="position:absolute; z-index:131; display:none; " id="popimage1" src="http://turiscam.comunitatvalenciana.com/denia.jpg?0.1481255725516435" alt="" />
+            <img class="d-block w-100" style="position:absolute; z-index:132; display:none; " id="popimage2" src="http://turiscam.comunitatvalenciana.com/denia.jpg?0.27504339971864056" alt="" />
+          </div>
+        </section>
         <div class="mask rgba-black-strong"></div>
       </div>
       <div class="carousel-caption">
@@ -67,13 +54,14 @@
     <div class="carousel-item">
       <!--Mask color-->
       <div class="view">
-      <section class="webcam">
-                <div id="webcam-visor">
-                    <img class="d-block w-100" style="position:absolute; z-index:127; display:none; " id="popimage0" src="http://turiscam.comunitatvalenciana.com/oliva.jpg?0.6469837288851448" alt="" />
-                    <img class="d-block w-100" style="position:absolute; z-index:131; display:none; " id="popimage1" src="http://turiscam.comunitatvalenciana.com/oliva.jpg?0.1481255725516435" alt="" />
-                    <img class="d-block w-100" style="position:absolute; z-index:132; display:none; " id="popimage2" src="http://turiscam.comunitatvalenciana.com/oliva.jpg?0.27504339971864056" alt="" />
-                </div>
-            </section>
+        <section class="webcam">
+          <div id="webcam-visor">
+            <img class="img-fluid imgcam" style="position:absolute; z-index:OZ;" id="fondo" src="{{ asset('img/loading.gif') }}" alt="" />
+            <img class="d-block w-100" style="position:absolute; z-index:127; display:none; " id="popimage0" src="http://turiscam.comunitatvalenciana.com/oliva.jpg?0.6469837288851448" alt="" />
+            <img class="d-block w-100" style="position:absolute; z-index:131; display:none; " id="popimage1" src="http://turiscam.comunitatvalenciana.com/oliva.jpg?0.1481255725516435" alt="" />
+            <img class="d-block w-100" style="position:absolute; z-index:132; display:none; " id="popimage2" src="http://turiscam.comunitatvalenciana.com/oliva.jpg?0.27504339971864056" alt="" />
+          </div>
+        </section>
         <div class="mask rgba-black-slight"></div>
       </div>
       <div class="carousel-caption">
@@ -94,8 +82,7 @@
   </a>
   <!--/.Controls-->
 </div>
-<!--/.Carousel Wrapper-->
-<!--/.Carousel Wrapper-->
+
 <!--<div id="carouselExampleIndicators" class="carousel slide carousel-fade carousel-dark" data-ride="carousel">
     <ol class="carousel-indicators">
         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
