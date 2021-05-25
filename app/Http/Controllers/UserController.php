@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\DB;
 
+
 class UserController extends Controller
 {
     /**
@@ -16,7 +17,6 @@ class UserController extends Controller
      */
     public function index()
     {
-
         $users = User::latest()->simplePaginate(6);
 
         return view('users.index', compact('users', 'users'))
@@ -104,9 +104,16 @@ class UserController extends Controller
         $users->tipo_usuario = $request->get('tipo_usuario');
         $users->password = Hash::make($request->get('password'));
 
-        $users->update();
-
-        return redirect('/users')->with('success', 'Usuario editado correctamente.');
+        $admin = User::whereTipoUsuario(1)->count();
+        
+        //si hay mas de un usuario administrador o el usuario que pasamos por valor es 1
+        if ($admin > 1 || $users->tipo_usuario == 1) {
+            $users->update();
+            return redirect('/users')->with('success', 'Usuario editado correctamente.');
+        } else {
+            //si queda un solo administrador y pasamos el valor 0
+            return redirect('/users')->with('message', 'No puede eliminar todos los administradores.');
+        }
     }
 
     /**
@@ -122,7 +129,7 @@ class UserController extends Controller
 
             return redirect('/users')->with('success', 'Usuario borrado correctamente.');
         } else {
-            return redirect('/users')->with('success', 'El usuario es administrador y no se puede borrar, cambie en la configuración el tipo de usuario.');
+            return redirect('/users')->with('message', 'El usuario es administrador y no se puede borrar, cambie en la configuración el tipo de usuario.');
         }
     }
 }

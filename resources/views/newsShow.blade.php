@@ -24,4 +24,5 @@
         </div>
     </div>
 </div>
+<script src="{{ asset('js/cambiarUrl.js') }}"></script>
 @endsection
