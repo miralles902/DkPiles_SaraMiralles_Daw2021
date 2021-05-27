@@ -27,6 +27,10 @@ use Illuminate\Support\Facades\Auth;
 Route::get('/', function () {
     return view('index');
 });
+/* pagina de cookies */
+Route::get('/cookies', function () {
+    return view('cookies');
+});
 
 /*paginas web principales*/
 Route::get('/contacto', function () {

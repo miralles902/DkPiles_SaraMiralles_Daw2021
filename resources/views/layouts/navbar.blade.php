@@ -24,10 +24,12 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
 
-
+    <!-- cookies-->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
 
     <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
 
     <!-- php -->
     <?php
@@ -48,12 +50,12 @@
 
 <body>
     <header>
-            <!-- Creating a SVG image -->
-            <svg  viewBox="0 0 500 170" preserveAspectRatio="none">
-                <path d="M0, 100 C150, 200 350,
+        <!-- Creating a SVG image -->
+        <svg viewBox="0 0 500 170" preserveAspectRatio="none">
+            <path d="M0, 100 C150, 200 350,
                 0 500, 100 L500, 00 L0, 0 Z" style="stroke:none; fill:black;">
-                </path>
-            </svg>
+            </path>
+        </svg>
         <div class="container navbarLogo">
             <a title="Dunes Kite Piles" href="{{ url('/') }}" target="_self"><img src="svg/logo.svg" id="logo" alt="logo dkpiles"></a>
             <div class="row">
@@ -175,6 +177,7 @@
     </script>
     <script src="{{ asset('js/mostrarOcultarBotones.js') }}"></script>
     <script src="{{ asset('js/navbar.js') }}"></script>
+    <script src="{{ asset('js/bannerCookies.js') }}"></script>
 </body>
 
 </html>
