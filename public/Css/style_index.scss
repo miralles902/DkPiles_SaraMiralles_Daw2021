@@ -170,8 +170,27 @@ body {
             height: 350px;
             border: 0;
         }
-        #cal{
-            height:300px;
+        #cal {
+            height: 300px;
+        }
+
+        .carousel-indicators {
+            z-index: 999;
+        }
+        .carousel-control-prev {
+            z-index: 999;
+        }
+        .carousel-control-next {
+            z-index: 999;
+        }
+        .carousel-caption.d-md-block {
+            z-index: 999;
+        }
+        .imgCamara{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            display: inline;
         }
     }
     footer {
@@ -301,8 +320,8 @@ body {
             #maps {
                 height: 450px;
             }
-            #cal{
-                height:450px;
+            #cal {
+                height: 450px;
             }
         }
     }
@@ -346,8 +365,8 @@ body {
             #meteo {
                 padding-left: 50%;
             }
-            #cal{
-                height:100%;
+            #cal {
+                height: 100%;
             }
         }
     }

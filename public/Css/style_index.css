@@ -182,6 +182,29 @@ body main #cal {
   height: 300px;
 }
 
+body main .carousel-indicators {
+  z-index: 999;
+}
+
+body main .carousel-control-prev {
+  z-index: 999;
+}
+
+body main .carousel-control-next {
+  z-index: 999;
+}
+
+body main .carousel-caption.d-md-block {
+  z-index: 999;
+}
+
+body main .imgCamara {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: inline;
+}
+
 body footer #nav-mobile a {
   text-decoration: none;
 }

@@ -2,143 +2,169 @@
 @section('title', 'Webcams')
 @section('content_page')
 <h4>Webcams</h4>
-<!--Carousel Wrapper-->
-<div id="carousel-example-2" class="carousel slide carousel-fade" data-ride="carousel">
-  <!--Indicators-->
-  <ol class="carousel-indicators">
-    <li data-target="#carousel-example-2" data-slide-to="0" class="active"></li>
-    <li data-target="#carousel-example-2" data-slide-to="1"></li>
-    <li data-target="#carousel-example-2" data-slide-to="2"></li>
-  </ol>
-  <!--/.Indicators-->
-  <!--Slides-->
-  <div class="carousel-inner" role="listbox">
-    <div class="carousel-item active">
-      <div class="view">
-        <section class="webcam">
-          <div id="hora">
-            01-02-2021 11:57:30
-          </div>
-          <div id="webcam-visor">
-            <img class="img-fluid imgcam" style="position:absolute; z-index:OZ;" id="fondo" src="{{ asset('img/loading.gif') }}" alt="" />
-            <img style="position:absolute; z-index:127; display:none; " id="popimage0" src="http://turiscam.comunitatvalenciana.com/gandia.jpg?0.6469837288851448" alt="" />
-            <img style="position:absolute; z-index:131; display:none; " id="popimage1" src="http://turiscam.comunitatvalenciana.com/gandia.jpg?0.9859589556649855" alt="" />
-            <img style="position:absolute; z-index:132; display:none; " id="popimage2" src="http://turiscam.comunitatvalenciana.com/gandia.jpg?0.27504339971864056" alt="" />
-          </div>
-        </section>
-        <div class="mask rgba-black-light"></div>
-      </div>
-      <div class="carousel-caption">
-        <h3 class="h3-responsive">Light mask</h3>
-        <p>First text</p>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <!--Mask color-->
-      <div class="view">
-        <section class="webcam">
-          <div id="webcam-visor">
-            <img class="img-fluid imgcam" style="position:absolute; z-index:OZ;" id="fondo" src="{{ asset('img/loading.gif') }}" alt="" />
-            <img class="d-block w-100" style="position:absolute; z-index:127; display:none; " id="popimage0" src="http://turiscam.comunitatvalenciana.com/denia.jpg?0.6469837288851448" alt="" />
-            <img class="d-block w-100" style="position:absolute; z-index:131; display:none; " id="popimage1" src="http://turiscam.comunitatvalenciana.com/denia.jpg?0.1481255725516435" alt="" />
-            <img class="d-block w-100" style="position:absolute; z-index:132; display:none; " id="popimage2" src="http://turiscam.comunitatvalenciana.com/denia.jpg?0.27504339971864056" alt="" />
-          </div>
-        </section>
-        <div class="mask rgba-black-strong"></div>
-      </div>
-      <div class="carousel-caption">
-        <h3 class="h3-responsive">Strong mask</h3>
-        <p>Secondary text</p>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <!--Mask color-->
-      <div class="view">
-        <section class="webcam">
-          <div id="webcam-visor">
-            <img class="img-fluid imgcam" style="position:absolute; z-index:OZ;" id="fondo" src="{{ asset('img/loading.gif') }}" alt="" />
-            <img class="d-block w-100" style="position:absolute; z-index:127; display:none; " id="popimage0" src="http://turiscam.comunitatvalenciana.com/oliva.jpg?0.6469837288851448" alt="" />
-            <img class="d-block w-100" style="position:absolute; z-index:131; display:none; " id="popimage1" src="http://turiscam.comunitatvalenciana.com/oliva.jpg?0.1481255725516435" alt="" />
-            <img class="d-block w-100" style="position:absolute; z-index:132; display:none; " id="popimage2" src="http://turiscam.comunitatvalenciana.com/oliva.jpg?0.27504339971864056" alt="" />
-          </div>
-        </section>
-        <div class="mask rgba-black-slight"></div>
-      </div>
-      <div class="carousel-caption">
-        <h3 class="h3-responsive">Slight mask</h3>
-        <p>Third text</p>
-      </div>
-    </div>
+<div class="container">
+  <div id="hora" class="text-center">
+    01-02-2021 11:57:30
   </div>
-  <!--/.Slides-->
-  <!--Controls-->
-  <a class="carousel-control-prev" href="#carousel-example-2" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#carousel-example-2" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-  <!--/.Controls-->
-</div>
+  <div id="carouselDkPiles" class="carousel slide" data-ride="carousel">
 
-<!--<div id="carouselExampleIndicators" class="carousel slide carousel-fade carousel-dark" data-ride="carousel">
     <ol class="carousel-indicators">
-        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      <li data-target="#carouselDkPiles" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselDkPiles" data-slide-to="1"></li>
+      <li data-target="#carouselDkPiles" data-slide-to="2"></li>
     </ol>
-    <div class="carousel-inner">
-        <div class="carousel-item active">
-            <section class="webcam">
-                <div id="webcam-visor">
-                    <img class="img-fluid imgcam d-block w-100" style="position:absolute; z-index:OZ;" id="fondo" src="./gandia_nit2.jpg" alt="" />
-                    <img class="img-fluid imgcam  d-block w-100" style="position:absolute; z-index:127; display:none; " id="popimage0" src="http://turiscam.comunitatvalenciana.com/gandia.jpg?0.6469837288851448" alt="" />
-                    <img class="img-fluid imgcam  d-block w-100" style="position:absolute; z-index:131; display:none; " id="popimage1" src="http://turiscam.comunitatvalenciana.com/gandia.jpg?0.1481255725516435" alt="" />
-                    <img class="img-fluid imgcam  d-block w-100" style="position:absolute; z-index:132; display:none; " id="popimage2" src="http://turiscam.comunitatvalenciana.com/gandia.jpg?0.27504339971864056" alt="" />
-                </div>
-                <div class="carousel-caption d-none d-md-block">
-        <h5>First slide label</h5>
-        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-      </div>
-            </section>
-        </div>
-        <div class="carousel-item">
-            <section class="webcam">
-                <div id="webcam-visor">
-                    <img class="img-fluid imgcam d-block w-100" style="position:absolute; z-index:OZ;" id="fondo" src="./gandia_nit2.jpg" alt="" />
-                    <img class="img-fluid imgcam  d-block w-100" style="position:absolute; z-index:127; display:none; " id="popimage0" src="http://turiscam.comunitatvalenciana.com/denia.jpg?0.6469837288851448" alt="" />
-                    <img class="img-fluid imgcam  d-block w-100" style="position:absolute; z-index:131; display:none; " id="popimage1" src="http://turiscam.comunitatvalenciana.com/denia.jpg?0.1481255725516435" alt="" />
-                    <img class="img-fluid imgcam  d-block w-100" style="position:absolute; z-index:132; display:none; " id="popimage2" src="http://turiscam.comunitatvalenciana.com/denia.jpg?0.27504339971864056" alt="" />
-                </div>
-            </section>
-        </div>
-        <div class="carousel-item">
-            <section class="webcam">
-                <div id="webcam-visor">
-                    <img class="img-fluid imgcam d-block w-100" style="position:absolute; z-index:OZ;" id="fondo" src="./gandia_nit2.jpg" alt="" />
-                    <img class="img-fluid imgcam  d-block w-100" style="position:absolute; z-index:127; display:none; " id="popimage0" src="http://turiscam.comunitatvalenciana.com/oliva.jpg?0.6469837288851448" alt="" />
-                    <img class="img-fluid imgcam  d-block w-100" style="position:absolute; z-index:131; display:none; " id="popimage1" src="http://turiscam.comunitatvalenciana.com/oliva.jpg?0.1481255725516435" alt="" />
-                    <img class="img-fluid imgcam  d-block w-100" style="position:absolute; z-index:132; display:none; " id="popimage2" src="http://turiscam.comunitatvalenciana.com/oliva.jpg?0.27504339971864056" alt="" />
-                </div>
-            </section>
-        </div>
-    </div>
-    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-    </a>
-    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-    </a>
-</div>-->
 
-<!-- Optional JavaScript -->
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="visor-webcam" id="res-multimedia">
+          <div id="webcam-visor" class="w-100 position-relative">
+            <img style=" z-index: 214;" class="imgCamara" id="popimage0" src="http://turiscam.comunitatvalenciana.com/gandia.jpg?0.4597586479274576" alt="">
+            <img style=" z-index: 215;" class="imgCamara" id="popimage1" src="http://turiscam.comunitatvalenciana.com/gandia.jpg?0.7961306698002091" alt="">
+            <img style=" z-index: 216;" class="imgCamara" id="popimage2" src="http://turiscam.comunitatvalenciana.com/gandia.jpg?0.6631341091105099" alt="">
+
+            <img src="http://turiscam.comunitatvalenciana.com/gandia.jpg" class="invisible" alt="Gandia">
+          </div>
+        </div>
+        <div class="carousel-caption d-md-block">
+          <h3>Playa de Gandia</h3>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <div class="visor-webcam" id="res-multimedia">
+          <div id="webcam-d" class="w-100 position-relative">
+            <img style=" z-index: 214;" class="imgCamara" id="calpeimage0" src="http://turiscam.comunitatvalenciana.com/calpec.jpg?0.4597586479274576" alt="">
+            <img style=" z-index: 215;" class="imgCamara" id="calpeimage1" src="http://turiscam.comunitatvalenciana.com/calpec.jpg?0.7961306698002091" alt="">
+            <img style=" z-index: 216;" class="imgCamara" id="calpeimage2" src="http://turiscam.comunitatvalenciana.com/calpec.jpg?0.6631341091105099" alt="">
+
+            <img src="http://turiscam.comunitatvalenciana.com/calpec.jpg" class="invisible" alt="Calpe">
+          </div>
+        </div>
+        <div class="carousel-caption d-md-block">
+          <h3>Playa de Calpe</h3>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <div class="visor-webcam" id="res-multimedia">
+          <div id="webcam-d" class="position-relative">
+            <img style=" z-index: 214;" class="imgCamara" id="deniaimage0" src="http://turiscam.comunitatvalenciana.com/olivap.jpg?0.4597586479274576" alt="">
+            <img style=" z-index: 215;" class="imgCamara" id="deniaimage1" src="http://turiscam.comunitatvalenciana.com/olivap.jpg?0.7961306698002091" alt="">
+            <img style=" z-index: 216;" class="imgCamara" id="deniaimage2" src="http://turiscam.comunitatvalenciana.com/olivap.jpg?0.6631341091105099" alt="">
+
+            <img src="http://turiscam.comunitatvalenciana.com/olivap.jpg" class="invisible" alt="Denia">
+          </div>
+        </div>
+        <div class="carousel-caption d-md-block">
+          <h3>Puerto de Oliva</h3>
+        </div>
+      </div>
+    </div>
+    <a href="#carouselDkPiles" class="carousel-control-prev" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+
+    <a href="#carouselDkPiles" class="carousel-control-next" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+
+  </div>
+</div>
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<scrip src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></scrip>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-<script src="{{ asset('js/camaraGandia.js') }}"></script>
+
+<script type="text/javascript">
+  function refresh_image(image_to_refresh) {
+    var webcam_TB = $(".node-type-webcam #TB_Image");
+    if (webcam_TB.parent().siblings("#TB_caption").children("#TB_secondLine").html() == "") webcam_TB.show();
+    if (webcam_TB.parent().siblings("#TB_caption").children("#TB_secondLine").html() == "") webcam_TB.attr("src", path + "?" + Math.random());
+    var image = $("#popimage" + image_to_refresh);
+    path = image.attr("src").split("?");
+    path = path[0];
+    image.attr("src", path + "?" + Math.random());
+    setTimeout("update_zindex(" + image_to_refresh + ")", 150);
+    image_to_refresh++;
+    image_to_refresh = image_to_refresh % 3;
+    var webcam_timeout = parseInt(3) * 1E3;
+    setTimeout("refresh_image(" + image_to_refresh + ")", webcam_timeout)
+  }
+
+  function refresh_image_calpe(image_to_refresh_calpe) {
+    var webcam_TB = $(".node-type-webcam #TB_Image");
+    if (webcam_TB.parent().siblings("#TB_caption").children("#TB_secondLine").html() == "") webcam_TB.show();
+    if (webcam_TB.parent().siblings("#TB_caption").children("#TB_secondLine").html() == "") webcam_TB.attr("src", path + "?" + Math.random());
+    var image = $("#calpeimage" + image_to_refresh_calpe);
+    path = image.attr("src").split("?");
+    path = path[0];
+    image.attr("src", path + "?" + Math.random());
+    setTimeout("update_zindex_calpe(" + image_to_refresh_calpe + ")", 150);
+    image_to_refresh_calpe++;
+    image_to_refresh_calpe = image_to_refresh_calpe % 3;
+    var webcam_timeout = parseInt(3) * 1E3;
+    setTimeout("refresh_image_calpe(" + image_to_refresh_calpe + ")", webcam_timeout)
+  }
+
+  function refresh_image_denia(image_to_refresh_denia) {
+    var webcam_TB = $(".node-type-webcam #TB_Image");
+    if (webcam_TB.parent().siblings("#TB_caption").children("#TB_secondLine").html() == "") webcam_TB.show();
+    if (webcam_TB.parent().siblings("#TB_caption").children("#TB_secondLine").html() == "") webcam_TB.attr("src", path + "?" + Math.random());
+    var image = $("#deniaimage" + image_to_refresh_denia);
+    path = image.attr("src").split("?");
+    path = path[0];
+    image.attr("src", path + "?" + Math.random());
+    setTimeout("update_zindex_denia(" + image_to_refresh_denia + ")", 150);
+    image_to_refresh_denia++;
+    image_to_refresh_denia = image_to_refresh_denia % 3;
+    var webcam_timeout = parseInt(3) * 1E3;
+    setTimeout("refresh_image_denia(" + image_to_refresh_denia + ")", webcam_timeout)
+  }
+
+  function hora_actual() {
+    var fecha = new Date;
+    var dia = fecha.getDate();
+    var mes = fecha.getMonth() + 1;
+    var anyo = fecha.getFullYear();
+    var hora = fecha.getHours();
+    var minuto = fecha.getMinutes();
+    var segundo = fecha.getSeconds();
+    if (dia < 10) dia = "0" + dia;
+    if (mes < 10) mes = "0" + mes;
+    if (hora < 10) hora = "0" + hora;
+    if (minuto < 10) minuto = "0" + minuto;
+    if (segundo < 10) segundo = "0" + segundo;
+    var hora_actual = dia + "-" + mes + "-" + anyo + " " + hora + ":" + minuto + ":" + segundo;
+    $("#hora").text(hora_actual)
+  }
+
+  function update_zindex(image_to_refresh) {
+    current_zindex = parseInt($("#popimage" + image_to_refresh).css("z-index"));
+    $("#popimage" + image_to_refresh).css("z-index", current_zindex + 3).show();
+    hora_actual()
+  }
+
+  function update_zindex_calpe(image_to_refresh_calpe) {
+    current_zindex = parseInt($("#calpeimage" + image_to_refresh_calpe).css("z-index"));
+    $("#calpeimage" + image_to_refresh_calpe).css("z-index", current_zindex + 3).show();
+    hora_actual()
+  }
+
+  function update_zindex_denia(image_to_refresh_denia) {
+    current_zindex = parseInt($("#deniaimage" + image_to_refresh_denia).css("z-index"));
+    $("#deniaimage" + image_to_refresh_denia).css("z-index", current_zindex + 3).show();
+    hora_actual()
+  }
+  $(document).ready(function() {
+    $("#popimage0").show();
+    $("#calpeimage0").show();
+    $("#deniaimage0").show();
+    refresh_image(0);
+    refresh_image_calpe(0);
+    refresh_image_denia(0);
+    hora_actual()
+  });
+</script>
 @endsection
