@@ -25,16 +25,33 @@
                                     @csrf
                                     @method('PUT')
 
-                                    <div class="form-group text-center">
-
-                                        <input type="checkbox" onClick="toggle(this)" /> Seleccionar/Deseleccionar todos<br><br>
-                                        <label><input type="checkbox" value="contacto" name="category[]"> Contacto</label>
-                                        <label><input type="checkbox" value="tiempo" name="category[]"> El Tiempo</label>
-                                        <label><input type="checkbox" value="galeria" name="category[]"> Galeria</label>
-                                        <label><input type="checkbox" value="mercadillo" name="category[]"> Mercadillo</label>
-                                        <label><input type="checkbox" value="noticias" name="category[]"> Noticias</label>
-                                        <label><input type="checkbox" value="webcams" name="category[]"> Webcams</label>
-                                    </div>
+                                    <table class="table table-striped">
+                                        <thead class="thead-dark">
+                                            <tr>
+                                                <th><input type="checkbox" onClick="toggle(this)" /> Seleccionar/Deseleccionar todos</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td> <input type="checkbox" value="tiempo" name="category[]"> El Tiempo</td>
+                                            </tr>
+                                            <tr>
+                                                <td> <input type="checkbox" value="webcams" name="category[]"> Webcams</td>
+                                            </tr>
+                                            <tr>
+                                                <td> <input type="checkbox" value="contacto" name="category[]"> Contacto</td>
+                                            </tr>
+                                            <tr>
+                                                <td> <input type="checkbox" value="galeria" name="category[]"> Galeria</td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="checkbox" value="mercadillo" name="category[]"> Mercadillo</td>
+                                            </tr>
+                                            <tr>
+                                                <td> <input type="checkbox" value="noticias" name="category[]"> Noticias</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
                             </div>
 
                         </div>

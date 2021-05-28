@@ -34,7 +34,7 @@
                     <br>
                     @foreach($config->category as $value)
                     <tr>
-                        <td>{{$value}}</td>
+                        <td class="text-uppercase">{{$value}}</td>
                         <td><i class="fa fa-check" aria-hidden="true"></i></td>
                     </tr>
                     @endforeach
