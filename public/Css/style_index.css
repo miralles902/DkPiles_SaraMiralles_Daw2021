@@ -182,6 +182,10 @@ body main #cal {
   height: 300px;
 }
 
+body main .carousel {
+  height: 250px;
+}
+
 body main .carousel-indicators {
   z-index: 999;
 }
@@ -196,11 +200,15 @@ body main .carousel-control-next {
 
 body main .carousel-caption.d-md-block {
   z-index: 999;
+  margin-bottom: 21.5rem;
+}
+
+body main .carousel-caption.d-md-block h3 {
+  font-size: 22px;
 }
 
 body main .imgCamara {
-  width: 100%;
-  height: 100%;
+  height: 250px;
   position: absolute;
   display: inline;
 }
@@ -321,6 +329,20 @@ body .escondido {
   }
   body main #cal {
     height: 450px;
+  }
+  body main .carousel {
+    height: unset;
+  }
+  body main .carousel-caption.d-md-block {
+    z-index: 999;
+    margin-bottom: unset;
+  }
+  body main .carousel-caption.d-md-block h3 {
+    font-size: 2rem;
+  }
+  body main .imgCamara {
+    width: 100%;
+    height: 100%;
   }
 }
 

@@ -7,7 +7,7 @@
     01-02-2021 11:57:30
   </div>
   <div id="carouselDkPiles" class="carousel slide" data-ride="carousel">
-
+    
     <ol class="carousel-indicators">
       <li data-target="#carouselDkPiles" data-slide-to="0" class="active"></li>
       <li data-target="#carouselDkPiles" data-slide-to="1"></li>
@@ -69,7 +69,6 @@
       <span class="carousel-control-next-icon" aria-hidden="true"></span>
       <span class="sr-only">Next</span>
     </a>
-
   </div>
 </div>
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->

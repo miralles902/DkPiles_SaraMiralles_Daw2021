@@ -173,7 +173,9 @@ body {
         #cal {
             height: 300px;
         }
-
+        .carousel{
+            height: 250px;
+        }
         .carousel-indicators {
             z-index: 999;
         }
@@ -185,10 +187,13 @@ body {
         }
         .carousel-caption.d-md-block {
             z-index: 999;
+            margin-bottom: 21.5rem;
+        }
+        .carousel-caption.d-md-block h3{
+            font-size: 22px;
         }
         .imgCamara {
-            width: 100%;
-            height: 100%;
+            height: 250px;
             position: absolute;
             display: inline;
         }
@@ -322,6 +327,20 @@ body {
             }
             #cal {
                 height: 450px;
+            }
+            .carousel{
+                height: unset;
+            }
+            .carousel-caption.d-md-block {
+                z-index: 999;
+                margin-bottom: unset;
+            }
+            .carousel-caption.d-md-block h3{
+                font-size: 2rem;
+            }
+            .imgCamara {
+                width: 100%;
+                height: 100%;
             }
         }
     }
