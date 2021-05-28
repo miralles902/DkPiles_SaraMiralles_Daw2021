@@ -71,9 +71,11 @@
 <!-- sobre el club -->
 <h2>Breve Historia</h2>
 <div class="text-justify">
-    <p>En nuestra zona de Piles, tras el considerable grupo de amantes y praticantes de kitesurf, y ante las dificultades presentadas por las prohibiciones y continuas quejas de los bañistas , decidimos formar el actual club D.K.P., con la iniciativa de legalizar una zona</p>
-    <p>La solicitud de la zona la se tramita el año 2009 con vigencia hasta la fecha .Durante el transcurso de las temporadas , la directiva sufre varios cambios . En la actualidad el club consta de mas de 70 socios . La zona está ubicada al sur del termino de la playa de Piles , lindando con Oliva .Comarca de La safor . Esta comarca cuenta con cinco zonas legalizadas , dirigidas y gestionadas por sus correspondientes clubs.</p>
-    <p>Debido al constante crecimiento de deportistas es este sector , uno de nuestros mayores retos ,en estos momentos , es unificar criterios con el resto de clubs , para de este modo , tratar correctamente todas las visitas que recibimos durante la temporada . Y cierto es que la tarea no es nada fácil , aquí está prohibido navegar y para eliminar esta prohibición , los socios debemos soportar unos gastos, bastante elevados, para poder realizar la practica de este deporte que tantas satisfacciones nos aporta.</p>
+    <p>En nuestra zona de Piles, tras el considerable grupo de amantes y praticantes de kitesurf, y ante las dificultades presentadas por las prohibiciones y continuas quejas de los bañistas, decidímos formar el actual club D.K.P., con la iniciativa de legalizar una zona.</p>
+    <p>La solicitud de la zona la se tramita el año 2009 con vigencia hasta la fecha. Durante el transcurso de las temporadas, la directiva sufre varios cambios. En la actualidad el club consta de mas de 70 socios.</p>
+    <p>La zona está ubicada al sur del termino de la playa de Piles, lindando con Oliva (Comarca de La safor). Esta comarca cuenta con cinco zonas legalizadas , dirigidas y gestionadas por sus correspondientes clubs.</p>
+    <p>Debido al constante crecimiento de deportistas es este sector, uno de nuestros mayores retos, en estos momentos, es unificar criterios con el resto de clubs, para de este modo, tratar correctamente todas las visitas que recibimos durante la temporada.</p>
+    <p>Cierto es que la tarea no es nada fácil, aquí está prohibido navegar y para eliminar esta prohibición, los socios debemos soportar unos gastos, bastante elevados, para poder realizar la practica de este deporte que tantas satisfacciones nos aporta.</p>
 </div>
 
 @endsection
