@@ -1,6 +1,7 @@
 # Proyecto de renovación web DKPiles
 
-###Resumen
+### Resumen
+
 Dk Piles es un club orientado a practicar el deporte del Kitesurf en la playa de Piles y alrededores.
 
 En el proyecto se desarrolla una renovación completa de su página web, la cual con el paso de los años se ha quedado un poco obsoleta.
