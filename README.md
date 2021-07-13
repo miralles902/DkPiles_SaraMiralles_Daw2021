@@ -1,6 +1,5 @@
 # Proyecto de renovación web DKPiles
-### Primer documento de especificación
-[Documento de especificación inicial](https://docs.google.com/document/d/17uWzwI_lN5h81BUEML4IxGSWbEXcxtdYNIfyZOJ34As/edit?usp=sharing).
+[Documento de especificación final presentado en proyecto](https://docs.google.com/document/d/1m-T7c0El_2HAFEgfd8kD-B1OeoiHhEbk__pxduyqWDA/edit?usp=sharing).
 
-### Primera presentación al cliente
-[Presentació del proyecto inicial](https://docs.google.com/presentation/d/1Nl4dwLbBKXGAMVmM42wsjIB5oPt3Udj6Z0a7aXYwRfk/edit?usp=sharing).
+### Presentación al cliente
+[Presentación final del protecto](https://docs.google.com/presentation/d/14C3ka5vYLIFRXFLVk4bWZ_xSP6q9J6iwUk-VRHCKq_U/edit?usp=sharing).
